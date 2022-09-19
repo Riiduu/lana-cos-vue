@@ -1,6 +1,6 @@
 <template>
   <div class="Header">
-    <img alt="" :id="ids" class="menu-icon" src="../../assets/icons/menu-icon.png"/>
+    <img alt="" @click="btnClick" class="menu-icon" src="../../assets/icons/menu-icon.png"/>
     <h3 class="logo-label">LC Studio</h3>
     <div class="nav-options">
       <h3 id="main-label">LC Studio</h3>
@@ -21,13 +21,9 @@
 <script>
 export default {
   name: "HeaderComp",
-  data() {
-    return {
-      ids: null
-    }
-  },
-  mounted() {
-    this.ids = this._uid
+  props: {
+    btnClick: Function,
+    buttonId: null,
   }
 }
 </script>

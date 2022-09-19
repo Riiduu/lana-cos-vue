@@ -1,7 +1,7 @@
 <template>
-  <MenuBarPhone id="menu-fs"/>
+  <MenuBarPhone id="menu-fs" :close-menu="CloseMenu"/>
   <div id="hidable">
-    <HeaderComp id="menuOpenBtn"/>
+    <HeaderComp :btn-click="ShowMenu"/>
     <TitleComponent />
   </div>
 
@@ -21,7 +21,14 @@ export default {
     HeaderComp
   },
   methods: {
-    
+    ShowMenu() {
+      let dropMenu = document.getElementById('menu-fs');
+      dropMenu.style.display = "flex";
+    },
+    CloseMenu() {
+      let dropMenu = document.getElementById('menu-fs');
+      dropMenu.style.display = "none";
+    }
   }
 }
 </script>

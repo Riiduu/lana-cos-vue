@@ -1,6 +1,6 @@
 <template>
-  <div id="drop-menu" class="menu-bar">
-    <label @click="CloseButtonClick" id="close" class="closeBtn">X</label>
+  <div class="menu-bar">
+    <label @click="closeMenu" class="closeBtn">X</label>
 
     <option id="menu-option">Home</option>
     <option id="menu-option">About us</option>
@@ -12,12 +12,8 @@
 <script>
 export default {
   name: "MenuBarPhone",
-  methods: {
-    CloseButtonClick() {
-      let dropMenu = document.getElementById('drop-menu');
-      console.log('yeye')
-      dropMenu.style.background = 'blue';
-    }
+  props: {
+    closeMenu: Function,
   }
 }
 </script>
