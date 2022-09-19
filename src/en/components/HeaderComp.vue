@@ -1,5 +1,7 @@
 <template>
   <div class="Header">
+    <img alt="" :id="ids" class="menu-icon" src="../../assets/icons/menu-icon.png"/>
+    <h3 class="logo-label">LC Studio</h3>
     <div class="nav-options">
       <h3 id="main-label">LC Studio</h3>
       <label id="options">Pricing</label>
@@ -18,11 +20,27 @@
 
 <script>
 export default {
-  name: "HeaderComp"
+  name: "HeaderComp",
+  data() {
+    return {
+      ids: null
+    }
+  },
+  mounted() {
+    this.ids = this._uid
+  }
 }
 </script>
 
 <style lang="scss" scoped>
+  .menu-icon {
+    display: none;
+  }
+
+  .logo-label {
+    display: none;
+  }
+
   .Header {
     justify-content: space-between;
     height: 32px;
@@ -34,6 +52,7 @@ export default {
     padding: 15px 0 30px 0;
     width: 100%;
     position: fixed;
+    margin-top: -110px;
   }
 
   .nav-options {
@@ -71,9 +90,6 @@ export default {
     }
   }
 
-
-
-
   #lang-select-div {
     height: fit-content;
     padding-right: 20px;
@@ -93,6 +109,37 @@ export default {
     option {
       color: black;
     }
+  }
+
+  @media (max-width: 768px) {
+    .nav-options {
+      margin-left: 0px;
+      right: 0px;
+      display: none;
+    }
+
+    .menu-icon {
+      display: flex;
+      margin-bottom: -3px;
+      height: 50px;
+      width: 50px;
+    }
+
+    #lang-select-div {
+      padding-right: 0;
+    }
+
+    .logo-label {
+      display: flex;
+      font-family: 'Dancing Script', cursive;
+      vertical-align: center;
+      margin-top: 5px;
+      margin-bottom: auto;
+      font-size: xx-large;;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
   }
 
 
