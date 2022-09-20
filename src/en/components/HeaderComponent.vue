@@ -1,29 +1,43 @@
 <template>
-  <div class="Header">
-    <img alt="" @click="btnClick" class="menu-icon" src="../../assets/icons/menu-icon.png"/>
-    <h3 class="logo-label">LC Studio</h3>
-    <div class="nav-options">
-      <h3 id="main-label">LC Studio</h3>
-      <label id="options">Pricing</label>
-      <label id="options">About us</label>
-      <label id="options">News</label>
-    </div>
+  <div class="navbar">
+    <div class="Header">
+      <img alt="" @click="btnClick" class="menu-icon" src="../../assets/icons/menu-icon.png"/>
+      <h3 class="logo-label" @click="transferHome">LC Studio</h3>
+      <div class="nav-options">
+        <h3 id="main-label" @click="transferHome">LC Studio</h3>
+        <label id="options">Pricing</label>
+        <label id="options" @click="transferAbout">About us</label>
+        <label id="options">News</label>
+      </div>
 
-    <div id="lang-select-div">
-      <select id="lang-select">
-        <option>en</option>
-        <option>fi</option>
-      </select>
+      <div id="lang-select-div">
+        <select id="lang-select">
+          <option>en</option>
+          <option>fi</option>
+        </select>
+      </div>
     </div>
   </div>
+  
+  <router-view />
 </template>
 
 <script>
+import router from '@/router'
+
 export default {
-  name: "HeaderComp",
+  name: "HeaderComponent",
   props: {
     btnClick: Function,
     buttonId: null,
+  },
+  methods: {
+    transferHome() {
+      router.push('/')
+    },
+    transferAbout() {
+      router.push('/about')
+    }
   }
 }
 </script>
@@ -37,6 +51,11 @@ export default {
     display: none;
   }
 
+  .navbar {
+    position: relative;
+    top: 0;
+  }
+
   .Header {
     justify-content: space-between;
     height: 32px;
@@ -48,7 +67,7 @@ export default {
     padding: 15px 0 30px 0;
     width: 100%;
     position: fixed;
-    margin-top: -110px;
+    // margin-top: -110px;
   }
 
   .nav-options {
