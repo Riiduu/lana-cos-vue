@@ -3,18 +3,19 @@
   <div id="hidable">
     <HeaderComponent :btn-click="ShowMenu"/>
     <!-- <TitleComponent /> -->
+    <h1>Home</h1>
   </div>
 
 </template>
 
 <script>
 
-import HeaderComponent from './components/HeaderComponent';
+import HeaderComponent from '@/en/components/HeaderComponent';
 // import TitleComponent from "@/en/components/HomeComponents/TitleComponent";
 import MenuBarPhone from "@/en/components/MenuBarPhone";
 
 export default {
-  name: 'App',
+  name: 'HomeView',
   components: {
     MenuBarPhone,
     // TitleComponent,
