@@ -3,7 +3,7 @@
     <img alt="" @click="btnClick" class="menu-icon" src="../../assets/icons/menu-icon.png"/>
     <h3 class="logo-label">LC Studio</h3>
     <div class="nav-options">
-      <h3 id="main-label">LC Studio</h3>
+      <h3 @click="transferHome" id="main-label">LC Studio</h3>
       <label id="options">Pricing</label>
       <label id="options">About us</label>
       <label id="options">News</label>
@@ -19,11 +19,24 @@
 </template>
 
 <script>
+import {router} from "express/lib/application";
+
 export default {
   name: "HeaderComp",
   props: {
     btnClick: Function,
     buttonId: null,
+  },
+  methods: {
+    tranferHome() {
+      router.push('/')
+    },
+    transferPricing() {
+
+    },
+    transferAboutUs() {
+      router.push('/AboutUs')
+    }
   }
 }
 </script>
