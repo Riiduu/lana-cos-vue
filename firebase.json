@@ -1,23 +1,16 @@
 {
   "hosting": {
-<<<<<<< Updated upstream
-    "public": "public",
-=======
     "public": "dist",
->>>>>>> Stashed changes
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-<<<<<<< Updated upstream
-=======
     ],
     "rewrites": [
       {
         "source": "**",
         "destination": "/index.html"
       }
->>>>>>> Stashed changes
     ]
   }
 }
