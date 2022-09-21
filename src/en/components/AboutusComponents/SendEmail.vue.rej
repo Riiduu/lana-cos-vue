@@ -1,0 +1,14 @@
+diff a/src/en/components/AboutusComponents/SendEmail.vue b/src/en/components/AboutusComponents/SendEmail.vue	(rejected hunks)
+@@ -82,11 +82,4 @@
+         border-radius: none;
+     }
+ }
+-
+-@media (max-width: 365px) {
+-    .email-forms {
+-        width: 66vw;
+-    }
+-}
+-
+ </style>
+\ No newline at end of file
