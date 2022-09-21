@@ -1,46 +1,22 @@
 <template>
-  <MenuBarPhone id="menu-fs" :close-menu="CloseMenu"/>
-  <div id="hidable">
-    <HeaderComponent :btn-click="ShowMenu"/>
-    <!-- <TitleComponent /> -->
+  <div class="app">
+    <HeaderComponent />
+    <div class="content">
+        <router-view/>
+    </div>
   </div>
-
+  
 </template>
 
 <script>
-
-import HeaderComponent from './components/HeaderComponent';
-// import TitleComponent from "@/en/components/HomeComponents/TitleComponent";
-import MenuBarPhone from "@/en/components/MenuBarPhone";
-
 export default {
-  name: 'App',
-  components: {
-    MenuBarPhone,
-    // TitleComponent,
-    HeaderComponent
-  },
-  methods: {
-    ShowMenu() {
-      let dropMenu = document.getElementById('menu-fs');
-      dropMenu.style.display = "flex";
-    },
-    CloseMenu() {
-      let dropMenu = document.getElementById('menu-fs');
-      dropMenu.style.display = "none";
-    }
-  }
+  name: "App",
+
 }
 </script>
 
 <style>
-body {
-  margin: 0 !important;
-  background-image: url("../assets/images/home-bg.jpg");
-  max-width: 100%;
-}
-
-#menu-fs {
-  display: none;
-}
+  body {
+    margin: 0 !important;
+  }
 </style>

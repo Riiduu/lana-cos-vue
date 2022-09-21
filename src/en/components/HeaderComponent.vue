@@ -17,13 +17,13 @@
         </select>
       </div>
     </div>
-  </div>
+  </div><br/>
   
   <router-view />
 </template>
 
 <script>
-import router from '@/router'
+import router from '@/en/router'
 
 export default {
   name: "HeaderComponent",
@@ -67,7 +67,7 @@ export default {
     padding: 15px 0 30px 0;
     width: 100%;
     position: fixed;
-    // margin-top: -110px;
+    text-align: center;
   }
 
   .nav-options {

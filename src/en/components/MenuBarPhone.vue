@@ -2,18 +2,30 @@
   <div class="menu-bar">
     <label @click="closeMenu" class="closeBtn">X</label>
 
-    <option id="menu-option">Home</option>
-    <option id="menu-option">About us</option>
+    <option @click="transferHome" id="menu-option">Home</option>
     <option id="menu-option">Pricing</option>
+    <option @click="transferAbout" id="menu-option">About us</option>
     <option id="menu-option">News</option>
   </div>
 </template>
 
 <script>
+import router from '@/en/router';
+
 export default {
   name: "MenuBarPhone",
   props: {
     closeMenu: Function,
+  },
+  methods: {
+    transferHome() {
+      router.push('/')
+    },
+
+    transferAbout()
+    {
+      router.push('/about')
+    }
   }
 }
 </script>

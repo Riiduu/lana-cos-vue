@@ -2,10 +2,11 @@
   <div class="title-component">
     <h1 class="title">Lana Cos Studio</h1>
     <label class="description">
-      Click the button bellow to read more
+      Browse through our pages to find out more
     </label>
     <div class="button-holder">
-      <button id="read-more-button">Read More</button>
+      <!-- {/* Sends to news page */} -->
+      <button id="read-more-button">Whats new?</button>
     </div>
   </div>
 </template>
@@ -63,6 +64,7 @@ export default {
   background-color: #676767;
   color: white;
   font-weight: bold;
+  cursor: pointer;
 
   &:hover {
     background-color: transparent;
