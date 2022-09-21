@@ -65,25 +65,32 @@ export default {
 
     .person-info {
         height: 240px;
-        width: 90vw;
+        width: 70vw;
         border: 1px solid gray;
+        padding: 0 20px;
         display: flex;
         flex-direction: row;
-        margin: 20px 0;
+        justify-content: center;
+        margin: 20px auto;
         background-color: white;
         text-align: left;
         font-size: x-large;
         border-bottom-right-radius: 15px;
+        box-shadow: 3px 2px rgb(76, 75, 75);
     }
 
     .person-img {
-        margin-left: -2px;
-        width: 20vw;
-        height: 241px;
+        margin: auto 100px auto auto;
+        width: 200px;
+        height: 200px;
+        vertical-align: middle;
+
+
 
         background: black;
+        border-radius: 180px;
         img {
-            width: 240px;
+            width: 200px;
         }
     }
 

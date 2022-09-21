@@ -81,19 +81,17 @@ export default {
   
   .about-us {
     max-width: 100vw;
-    height: 200vh;
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-image: url('@/assets/images/about-us-bg.jpg');
-    background: linear-gradient(45deg, white, grey)
+    background: linear-gradient(180deg, rgb(239, 214, 199),  rgb(229, 128, 145))
   }
 
   .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 140px 5% 0 5%;
+    margin: 140px auto 0 auto;
     text-align: center;
   }
 
