@@ -73,6 +73,7 @@ export default {
 <style lang="scss" scoped>
   #navbar {
     position: fixed;
+    
   }
   
   #menu-fs {
@@ -90,6 +91,9 @@ export default {
   }
 
   .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     justify-content: center;
     margin: 140px 5% 0 5%;
     text-align: center;
