@@ -3,9 +3,9 @@
         <h1 id="send-us">Send us an email</h1>
 
         <form id="contactform" action="https://formsubmit.io/send/kristians.jelinsks1@gmail.com" method="POST">
-        <input name="name" placeholder="name" type="text" id="name" required>
-        <input name="email" type="email" id="email" required>
-        <textarea name="comment" id="comment" rows="3" required></textarea>
+        <input name="name" placeholder="name" type="text" id="name">
+        <input name="email" type="email" id="email">
+        <textarea name="comment" id="comment" rows="3"></textarea>
 
         <input name="_formsubmit_id" type="text" style="display:none">
 
@@ -27,7 +27,6 @@ export default {
     padding: 40px 40px 40px 40px;
     width: 80vw;
     border-radius: 10px;
-    margin: 100px auto;
 
     h1 {
         color: white;
@@ -83,11 +82,4 @@ export default {
         border-radius: none;
     }
 }
-
-@media (max-width: 365px) {
-    .email-forms {
-        width: 66vw;
-    }
-}
-
 </style>
