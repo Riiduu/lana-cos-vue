@@ -3,13 +3,16 @@
         <h1 id="send-us">Send us an email</h1>
 
         <form id="contactform" action="https://formsubmit.io/send/kristians.jelinsks1@gmail.com" method="POST">
-        <input name="name" placeholder="name" type="text" id="name">
-        <input name="email" type="email" id="email">
-        <textarea name="comment" id="comment" rows="3"></textarea>
+            <div id="firstInfo">
+                
+            </div>
+            <input name="name" placeholder="name" type="text" id="name">
+            <input name="email" type="email" id="email">
+            <textarea name="comment" id="comment" rows="3"></textarea>
 
-        <input name="_formsubmit_id" type="text" style="display:none">
+            <input name="_formsubmit_id" type="text" style="display:none">
 
-        <input id="send-btn" value="Submit" type="submit">
+            <input id="send-btn" value="Submit" type="submit">
         </form>
     </div>
 </template>
