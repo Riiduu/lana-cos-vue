@@ -1,9 +1,5 @@
 {
   "projects": {
-<<<<<<< Updated upstream
-    "default": "lana-cos"
-=======
     "default": "lana-cos-test"
->>>>>>> Stashed changes
   }
 }
