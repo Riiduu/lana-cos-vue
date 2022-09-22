@@ -55,10 +55,16 @@ export default {
         display: none;
     }
 
+    .news {
+        background: linear-gradient(180deg, rgb(239, 214, 199),  rgb(229, 128, 145));
+        min-height: 100vh;
+    }
+
     .content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin: 100px auto auto auto;
-    }
+        
+        }
 </style>

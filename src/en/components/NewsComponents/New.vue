@@ -17,6 +17,7 @@ export default {
 
 <style lang="scss" scoped>
     .new {
+        background-color: white;
         display: flex;
         flex-direction: column;
         text-align: left;
