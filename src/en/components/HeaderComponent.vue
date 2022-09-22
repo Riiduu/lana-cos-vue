@@ -7,7 +7,7 @@
         <h3 id="main-label" @click="transferHome">LC Studio</h3>
         <label id="options">Pricing</label>
         <label id="options" @click="transferAbout">About us</label>
-        <label id="options">News</label>
+        <label id="options" @click="transferNews">News</label>
       </div>
 
       <div id="lang-select-div">
@@ -37,6 +37,9 @@ export default {
     },
     transferAbout() {
       router.push('/about')
+    },
+    transferNews() {
+      router.push('/news')
     }
   }
 }
@@ -76,7 +79,7 @@ export default {
     vertical-align: center;
     display: flex;
     flex-direction: row;
-    width: 40%;
+    width: fit-content;
   }
 
   #main-label {

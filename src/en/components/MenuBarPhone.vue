@@ -5,7 +5,7 @@
     <option @click="transferHome" id="menu-option">Home</option>
     <option id="menu-option">Pricing</option>
     <option @click="transferAbout" id="menu-option">About us</option>
-    <option id="menu-option">News</option>
+    <option @click="transferNews" id="menu-option">News</option>
   </div>
 </template>
 
@@ -22,9 +22,11 @@ export default {
       router.push('/')
     },
 
-    transferAbout()
-    {
+    transferAbout() {
       router.push('/about')
+    },
+    transferNews() {
+      router.push('/news')
     }
   }
 }

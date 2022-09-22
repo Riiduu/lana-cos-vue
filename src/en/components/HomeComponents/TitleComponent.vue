@@ -6,14 +6,22 @@
     </label>
     <div class="button-holder">
       <!-- {/* Sends to news page */} -->
-      <button id="read-more-button">Whats new?</button>
+      <button id="read-more-button" @click="transferNews">Whats new?</button>
     </div>
   </div>
 </template>
 
 <script>
+  import router from '@/en/router'
+
+
 export default {
-  name: "TitleComponent"
+  name: "TitleComponent",
+  methods: {
+    transferNews() {
+      router.push('/news')
+    }
+  }
 }
 </script>
 
