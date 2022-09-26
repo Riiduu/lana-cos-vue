@@ -31,9 +31,8 @@
               :education3="'Tai chi professional school'"
             />
 
-            <SendEmail />
-            
-            
+            <SendEmail />  
+            <GoogleMaps />
           </div>        
       </div>
     </div>
@@ -44,6 +43,7 @@ import HeaderComponent from '@/en/components/HeaderComponent.vue';
 import MenuBarPhone from '../components/MenuBarPhone.vue';
 import PersonInfo from '../components/AboutusComponents/PersonInfo.vue';
 import SendEmail from '../components/AboutusComponents/SendEmail.vue';
+import GoogleMaps from '../components/AboutusComponents/GoogleMaps.vue';
 
 export default {
   name: "AboutUs",
@@ -52,6 +52,7 @@ export default {
     MenuBarPhone,
     PersonInfo,
     SendEmail,
+    GoogleMaps
 },
   methods: {
     ShowMenu() {
@@ -93,6 +94,11 @@ export default {
     justify-content: center;
     margin: 140px auto 0 auto;
     text-align: center;
+  }
+
+  .maps-location {  
+    width: 600px;
+    height: 450px;
   }
 
   @media (max-width: 768px) {

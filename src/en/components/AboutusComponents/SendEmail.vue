@@ -27,7 +27,7 @@ export default {
 .email-forms {
     background-color: rgb(146, 85, 85);
     padding: 40px 0 80px 0;
-    margin: 100px auto 40px auto;
+    margin: 50px auto 40px auto;
     width: 80vw;
     border-radius: 10px;
     box-shadow: 3px 2px rgb(76, 75, 75);
