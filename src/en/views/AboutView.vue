@@ -4,7 +4,7 @@
       <div id="hidable">
         <HeaderComponent id="navbar" :btn-click="ShowMenu"/>
           <div class="content">
-            
+            <h2 id="staff-label">Our staff</h2>
             <PersonInfo 
               :personImg="'woman-1.png'"
 
