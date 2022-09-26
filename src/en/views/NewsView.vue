@@ -4,16 +4,21 @@
         <div id="hidable">
             <HeaderComponent id="navbar" :btn-click="ShowMenu"/>
             <div class="content">
+                <!-- New components go here -->
+
                 <NewComponent
                     :newTitle="'Something New'"
+                    :newDate="'23/09/2022'"
                     :newDesc="'Here is something new because this section is for something new.'"
                 />
                 <NewComponent
                     :newTitle="'Another New'"
+                    :newDate="'28/06/2022'"
                     :newDesc="'Here is something new because this section is for something new.'"
                 />
                 <NewComponent
                     :newTitle="`I'm also New`"
+                    :newDate="'19/06/2022'"
                     :newDesc="'Here is something new because this section is for something new.'"
                 />
             </div>

@@ -1,6 +1,9 @@
 <template>
     <div class="new">
-        <h3>{{ newTitle }}</h3>
+        <div class="top-row">
+            <h3>{{ newTitle }}</h3>
+            <label>{{ newDate }}</label>
+        </div>
         <label>{{ newDesc }}</label>
     </div>
 </template>
@@ -10,6 +13,7 @@ export default {
     name: "NewComponent",
     props: {
         newTitle: String,
+        newDate: String,
         newDesc: String,
     }
 }
@@ -27,6 +31,17 @@ export default {
         margin: 10px auto;
         border-radius: 10px;
         box-shadow: lightgray 2px 3px;
+    }
+
+    .top-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        label {
+            color: gray;
+            margin-top: 13px
+        }
     }
 
 </style>
