@@ -2,7 +2,7 @@
   <div class="navbar">
     <div class="Header">
       <img alt="" @click="btnClick" class="menu-icon" src="../../assets/icons/menu-icon.png"/>
-      <h3 class="logo-label" @click="transferHome">LC Studio</h3>
+      <h3 class="logo-label" @click="transferHome">LC STUDIO</h3>
       <div class="nav-options">
         <h3 id="main-label" @click="transferHome">LC Studio</h3>
         <label id="options" @click="transferPricing">Pricing & Info</label>
@@ -12,7 +12,7 @@
 
       <div id="lang-select-div">
         <div id="lang-select">
-          <label @click="transferFi">fi</label>
+          <label @click="transferEn">en</label>
         </div>
       </div>
     </div>
@@ -32,20 +32,20 @@ export default {
   },
   methods: {
     transferHome() {
-      router.push('/home')
+      router.push('/')
     },
     transferPricing()
     {
-      router.push('/en/pricing')
+      router.push('/pricing')
     },
     transferAbout() {
-      router.push('/en/about')
+      router.push('/about')
     },
     transferNews() {
-      router.push('/en/news')
+      router.push('/news')
     },
-    transferFi() {
-      router.push('/')
+    transferEn() {
+      router.push('/home')
     }
   }
 }
@@ -129,8 +129,8 @@ export default {
     margin-right: 30px;
     margin-top: 10px;
 
-    label {
-      cursor: pointer;
+    option {
+      color: black;
     }
   }
 

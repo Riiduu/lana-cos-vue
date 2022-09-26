@@ -6,7 +6,7 @@
     </label>
     <div class="button-holder">
       <!-- {/* Sends to news page */} -->
-      <button id="read-more-button" @click="transferNews">Whats new?</button>
+      <button id="read-more-button" @click="transferNews">ussi?</button>
     </div>
   </div>
 </template>
