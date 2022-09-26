@@ -2,7 +2,7 @@
     <div class="email-forms">
         <h2>Contact us</h2>
 
-        <form action="https://getform.io/f/a18dec37-669f-4e83-8f5b-cbfb2b06dd9c" method="POST">
+        <form class="send-email" action="https://getform.io/f/a18dec37-669f-4e83-8f5b-cbfb2b06dd9c" method="POST">
             <div id="top-row">
                 <input id="name" type="text" name="name" placeholder="Name">
                 <input id="email" type="email" name="email" placeholder="Email">
@@ -37,63 +37,85 @@ export default {
     }
 }
 
-#contactform {
+.send-email {
+    margin: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 70%;
     text-align: center;
-    margin: auto;
+}
+
+#top-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 #name {
     height: 30px;
-    width: 246px;
-    margin: 2px 0;
+    width: 50%;
+    margin: 0px 0;
     border-radius: 5px;
     padding: 3px;
 }
 
 #email {
     height: 30px;
-    width: 246px;
-    margin: 2px 0;
+    width: 50%;
+    margin: 0px 0;
     border-radius: 5px;
     padding: 3px;
 }
 
 #message {
     height: 80px;
-    width: 500px;
-    margin: 2px 0;
+    width: 99%;
     border-radius: 5px;
-    padding: 3px;
-    flex: auto;
+    margin: 2px auto;
 }
 
 #send-btn {
     background: white;
     border: none;
-    width: 505px;
+    width: fit-content;
     border-radius: 5px;
+    padding: 0 100px;
     height: 50px;
     cursor: pointer;
+    margin: auto
 }
 
 @media (max-width: 768px) {
     .email-forms {
-        width: 90vw;
+        width: 85vw;
         border-radius: none;
-        padding: 40px 0 80px 0;
+        padding: 40px 20px 80px 20px;
+    }
+
+    #name {
+        width: 100%;
+    }
+
+    #email {
+        width: 100%;       
+    }
+
+    #message {
+        width: 100%;
+    }
+
+    #send-btn {
+        width: fit-content;
+        padding: 0 100px;
     }
 }
 
 
-@media (max-width: 502px) {
-    .email-forms {
-        width: 90vw;
-        border-radius: none;
-        padding: 40px 0 80px 0;
-    }
-}
+// @media (max-width: 502px) {
+//     .email-forms {
+//         width: 90vw;
+//         border-radius: none;
+//         padding: 40px 0 80px 0;
+//     }
+// }
 </style>

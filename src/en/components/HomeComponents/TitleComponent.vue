@@ -34,7 +34,7 @@ export default {
 }
 
 .title {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Amiri Quran', serif;
   color: #414141;
   font-size: 5em;
   text-align: right;
