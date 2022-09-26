@@ -1,6 +1,5 @@
 <template>
     <div class="google-maps">
-        <h2>Visit us!</h2>
         <iframe 
             class="map" 
             style="border:0" 
@@ -21,11 +20,6 @@ export default {
     .google-maps {
         margin: 20px auto 100px auto;
         height: 600px;
-
-        h2 {
-            color: white;
-            font-weight: bold;
-        }
     }
 
     .map {

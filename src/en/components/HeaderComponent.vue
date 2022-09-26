@@ -87,10 +87,9 @@ export default {
   }
 
   #main-label {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Amiri Quran', serif;
     vertical-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: -28px;
     font-size: 2rem;
     cursor: pointer;
     transition: all 0.25s ease;
@@ -153,9 +152,9 @@ export default {
 
     .logo-label {
       display: flex;
-      font-family: 'Dancing Script', cursive;
+      font-family: 'Amiri Quran', serif;
       vertical-align: center;
-      margin-top: 5px;
+      margin-top: -22px;
       margin-bottom: auto;
       font-size: xx-large;;
       cursor: pointer;
@@ -163,6 +162,4 @@ export default {
     }
 
   }
-
-
 </style>
