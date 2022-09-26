@@ -76,7 +76,7 @@ export default {
         text-align: left;
         font-size: x-large;
         border-bottom-right-radius: 15px;
-        box-shadow: 3px 2px rgb(76, 75, 75);
+        box-shadow: 1px 1px rgb(149, 146, 146);
     }
 
     .person-img {

@@ -4,7 +4,7 @@
       <div id="hidable">
         <HeaderComponent id="navbar" :btn-click="ShowMenu"/>
           <div class="content">
-            <h2 id="staff-label">Our staff</h2>
+            <Socials />
             <PersonInfo 
               :personImg="'woman-1.png'"
 
@@ -44,6 +44,7 @@ import MenuBarPhone from '../components/MenuBarPhone.vue';
 import PersonInfo from '../components/AboutusComponents/PersonInfo.vue';
 import SendEmail from '../components/AboutusComponents/SendEmail.vue';
 import GoogleMaps from '../components/AboutusComponents/GoogleMaps.vue';
+import Socials from '../components/AboutusComponents/Socials.vue';
 
 export default {
   name: "AboutUs",
@@ -52,7 +53,8 @@ export default {
     MenuBarPhone,
     PersonInfo,
     SendEmail,
-    GoogleMaps
+    GoogleMaps,
+    Socials
 },
   methods: {
     ShowMenu() {
@@ -92,7 +94,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 140px auto 0 auto;
+    margin: 100px auto 0 auto;
     text-align: center;
   }
 
