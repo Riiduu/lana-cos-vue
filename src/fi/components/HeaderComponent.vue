@@ -5,9 +5,9 @@
       <h3 class="logo-label" @click="transferHome">LC STUDIO</h3>
       <div class="nav-options">
         <h3 id="main-label" @click="transferHome">LC Studio</h3>
-        <label id="options" @click="transferPricing">Pricing & Info</label>
-        <label id="options" @click="transferAbout">About us</label>
-        <label id="options" @click="transferNews">News</label>
+        <label id="options" @click="transferPricing">Hinnoittelu & Tiedot</label>
+        <label id="options" @click="transferAbout">Meistä</label>
+        <label id="options" @click="transferNews">Uutiset</label>
       </div>
 
       <div id="lang-select-div">

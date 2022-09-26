@@ -1,16 +1,16 @@
 <template>
     <div class="email-forms">
-        <h2>Contact us</h2>
+        <h2>Lähetä meille viesti</h2>
 
         <form class="send-email" action="https://getform.io/f/a18dec37-669f-4e83-8f5b-cbfb2b06dd9c" method="POST">
             <div id="top-row">
-                <input id="name" type="text" name="name" placeholder="Name">
-                <input id="email" type="email" name="email" placeholder="Email">
+                <input id="name" type="text" name="name" placeholder="Nimi">
+                <input id="email" type="email" name="email" placeholder="Sähköposti">
             </div>
             
-            <textarea id="message" type="text" name="message" placeholder="Message..."/><br />
+            <textarea id="message" type="text" name="message" placeholder="Viesti..."/><br />
         
-            <button id="send-btn" type="submit">Send</button>
+            <button id="send-btn" type="submit">Lähettää Viesti</button>
         </form>
     </div>
 </template>
@@ -101,7 +101,7 @@ export default {
     }
 
     #message {
-        width: 100%;
+        width: 98%;
     }
 
     #send-btn {

@@ -7,7 +7,7 @@
                 <!-- New components go here -->
 
                 <NewComponent
-                    :newTitle="'Something New'"
+                    :newTitle="'uutiset'"
                     :newDate="'23/09/2022'"
                     :newDesc="'Here is something new because this section is for something new.'"
                 />

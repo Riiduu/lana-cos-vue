@@ -22,13 +22,13 @@ export default {
       router.push('/')
     },
     transferPricing() {
-      router.push('/pricing')
+      router.push('en/pricing')
     },
     transferAbout() {
-      router.push('/about')
+      router.push('en/about')
     },
     transferNews() {
-      router.push('/news')
+      router.push('en/news')
     }
   }
 }

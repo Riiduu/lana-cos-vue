@@ -6,12 +6,12 @@
           <div class="content">
             <Socials />
             <PersonInfo 
-              :personImg="'woman-1.png'"
+              :personImg="'svetlana.jpg'"
 
-              :personName="'Jane Doe'"
-              :personPhone="'+358 0434759472'"
-              :personEmail="`janedoe@gmail.com`"  
-              :personSocial="'IG: @janedoe'"
+              :personName="'Svetlana Klementyeva'"
+              :personPhone="'+358 0445107254'"
+              :personEmail="`lanacosexpress@gmail.com`"  
+              :personSocial="'IG: @lana.cos.hair'"
 
               :education1="'Turku barber collage'"
               :education2="'Helsinki barber collage'"
@@ -19,7 +19,7 @@
             />
 
             <PersonInfo 
-              :personImg="'man-1.png'"
+              :personImg="'svetlana.jpg'"
 
               :personName="'John Doe'"
               :personPhone="'+358 0476917465'"
@@ -40,11 +40,11 @@
 
 <script>
 import HeaderComponent from '@/en/components/HeaderComponent.vue';
-import MenuBarPhone from '../components/MenuBarPhone.vue';
-import PersonInfo from '../components/AboutusComponents/PersonInfo.vue';
-import SendEmail from '../components/AboutusComponents/SendEmail.vue';
-import GoogleMaps from '../components/AboutusComponents/GoogleMaps.vue';
-import Socials from '../components/AboutusComponents/Socials.vue';
+import MenuBarPhone from '@/en/components/MenuBarPhone.vue';
+import PersonInfo from '@/en/components/AboutusComponents/PersonInfo.vue';
+import SendEmail from '@/en/components/AboutusComponents/SendEmail.vue';
+import GoogleMaps from '@/en/components/AboutusComponents/GoogleMaps.vue';
+import Socials from '@/en/components/AboutusComponents/Socials.vue';
 
 export default {
   name: "AboutUs",

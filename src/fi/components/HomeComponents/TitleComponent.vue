@@ -2,11 +2,11 @@
   <div class="title-component">
     <label class="title">Lana Cos Studio</label><br/><br/><br/>
     <label class="description">
-      Browse through our pages to find out more
+      Selaa sivujamme saadaksesi lisätietoja
     </label>
     <div class="button-holder">
       <!-- {/* Sends to news page */} -->
-      <button id="read-more-button" @click="transferNews">ussi?</button>
+      <button id="read-more-button" @click="transferNews">Mitä ussi?</button>
     </div>
   </div>
 </template>

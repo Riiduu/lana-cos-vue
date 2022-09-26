@@ -2,7 +2,7 @@
     <div class="person-info">
         <div class="desktop-info">
             <div class="person-img">
-            <img :src="require(`@/assets/icons/${personImg}`)"/>
+                <img :src="require(`@/assets/images/${personImg}`)"/>
             </div>
             <div class="person-personal-info">
                 <label>{{ personName }}</label>
@@ -18,7 +18,7 @@
         </div>
         <div class="mobile-info">
             <div class="mobile-img">
-                <img src="@/assets/icons/woman-1.png" />
+                <img :src="require(`@/assets/images/${personImg}`)"/>
             </div>
             <div class="mobile-personal-info">
                 <label>{{ personName }}</label>
@@ -65,7 +65,7 @@ export default {
 
     .person-info {
         height: 240px;
-        width: 70vw;
+        width: 75vw;
         border: 1px solid gray;
         padding: 0 20px;
         display: flex;
@@ -81,16 +81,11 @@ export default {
 
     .person-img {
         margin: auto 100px auto auto;
-        width: 200px;
-        height: 200px;
+        width: 150px;
         vertical-align: middle;
 
-
-
-        background: black;
-        border-radius: 180px;
         img {
-            width: 200px;
+            width: 150px;
         }
     }
 
@@ -133,8 +128,13 @@ export default {
         }
 
         .mobile-img {
-            background-color: black;
-            height: 200px;
+            margin-top: 10px;
+            width: 150px;
+            justify-content: center;
+            img {
+                margin-left: 45%;
+                width: 150px
+            }
             
         }
 

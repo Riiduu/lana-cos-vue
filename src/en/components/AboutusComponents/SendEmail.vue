@@ -10,7 +10,7 @@
             
             <textarea id="message" type="text" name="message" placeholder="Message..."/><br />
         
-            <button id="send-btn" type="submit">Send</button>
+            <button id="send-btn" type="submit">Send Message</button>
         </form>
     </div>
 </template>
@@ -101,7 +101,7 @@ export default {
     }
 
     #message {
-        width: 100%;
+        width: 98%;
     }
 
     #send-btn {

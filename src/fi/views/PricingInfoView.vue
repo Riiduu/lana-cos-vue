@@ -6,28 +6,28 @@
             <div class="content">
                 <div class="prices">
                     <div class="left-column">
-                        <h1>Men</h1>
-                            <label>Option 1 = 20$</label>
-                            <label>Option 2 = 35$</label>
-                            <label>Option 3 = 15$</label>
-                            <label>Option 4 = 20$</label>
+                        <h1>Miehet</h1>
+                            <label>Optio 1 = 20$</label>
+                            <label>Optio 2 = 35$</label>
+                            <label>Optio 3 = 15$</label>
+                            <label>Optio 4 = 20$</label>
 
-                            <h1>Women</h1>
-                                <label>Option 1 = 20$</label>
-                                <label>Option 2 = 60$</label>
-                                <label>Option 3 = 35$</label>
-                                <label>Option 4 = 10$</label>
+                            <h1>Naiset</h1>
+                                <label>Optio 1 = 20$</label>
+                                <label>Optio 2 = 60$</label>
+                                <label>Optio 3 = 35$</label>
+                                <label>Optio 4 = 10$</label>
                     </div>
 
                     <div class="right-column">
-                        <h1>Opening Hours</h1>
-                            <label id="list-option">Monday - 09:00-18:00</label>
-                            <label id="list-option">Tuesday - 09:00-18:00</label>
-                            <label id="list-option">Wednesday -  09:00-18:00</label>
-                            <label id="list-option">Thursday -  09:00-18:00</label>
-                            <label id="list-option">Friday - 09:00-18:00</label>
-                            <label id="list-option">Saturday - Closed</label>
-                            <label id="list-option">Sunday - Closed</label>
+                        <h1>Aukioloajat</h1>
+                            <label id="list-option">Maanantai - 09:00-18:00</label>
+                            <label id="list-option">Tiistai - 09:00-18:00</label>
+                            <label id="list-option">Keskiviiko -  09:00-18:00</label>
+                            <label id="list-option">Torstai -  09:00-18:00</label>
+                            <label id="list-option">Perjantai - 09:00-18:00</label>
+                            <label id="list-option">Lauantai - Suljettu</label>
+                            <label id="list-option">Sunnuntai - Suljettu</label>
                     </div>
                 </div>
             </div>
