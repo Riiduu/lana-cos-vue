@@ -64,9 +64,9 @@ export default {
 
 <style lang="scss" scoped>
     .pricing {
-        background-color: rgb(234, 202, 207);
+        background: linear-gradient(180deg, rgb(239, 214, 199),  rgb(229, 128, 145));
         height: 100vh;
-        color: black;
+        color: white;
         text-align: center;
     }
     
@@ -82,8 +82,15 @@ export default {
     }
 
     .prices {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        border-radius: 15px;
         display: flex;
         flex-direction: row;
+        border: 1px solid black;
+        width: 70%;
+        background-color: rgb(143, 79, 79);
     }
 
     .left-column {
@@ -129,12 +136,16 @@ export default {
     @media (max-width: 768px) {
         .pricing {
             height: 160vh;
+            color: black;
         }
 
         .prices {
             flex-direction: column;
             justify-content: center;
             margin: 0px auto;
+            width: 100%;
+            border: none;
+            background: none;
         }
 
         .left-column {
@@ -145,7 +156,7 @@ export default {
 
         .right-column {
             width: 100%;
-            text-align: justify;
+            text-align: center;
         }
     }
 </style>
