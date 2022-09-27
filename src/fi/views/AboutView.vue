@@ -5,6 +5,8 @@
         <HeaderComponent id="navbar" :btn-click="ShowMenu"/>
           <div class="content">
             <Socials />
+            
+
             <PersonInfo 
               :personImg="'svetlana.jpg'"
 
@@ -19,18 +21,18 @@
             />
 
             <PersonInfo 
-              :personImg="'svetlana.jpg'"
+              :personImg="'woman-1.jpg'"
 
-              :personName="'John Doe'"
-              :personPhone="'+358 0476917465'"
-              :personEmail="`johndoe@gmail.com`"  
-              :personSocial="'IG: @johndoe'"
+              :personName="'Jane Doe'"
+              :personPhone="'+358 0475893749'"
+              :personEmail="`janedoe@gmail.com`"  
+              :personSocial="'IG: @janedoe'"
 
-              :education1="'Cheeseburger collage'"
+              :education1="'Turku barber collage'"
               :education2="'Helsinki barber collage'"
-              :education3="'Tai chi professional school'"
+              :education3="'K-Market pelmen maker collage'"
             />
-
+              
             <SendEmail />  
             <GoogleMaps />
           </div>        

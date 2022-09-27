@@ -85,7 +85,7 @@ export default {
         vertical-align: middle;
 
         img {
-            width: 150px;
+            width: 100%;
         }
     }
 
@@ -124,16 +124,17 @@ export default {
         .person-info {
             height: fit-content;
             flex-direction: column;
-            text-align: center;
         }
 
         .mobile-img {
             margin-top: 10px;
             width: 150px;
             justify-content: center;
+            display: flex;
             img {
-                margin-left: 45%;
-                width: 150px
+                display: flex;
+                margin: 0 auto;
+                width: 100%;
             }
             
         }
@@ -142,7 +143,7 @@ export default {
             display: flex;
             flex-direction: column;
             margin: 10px;
-            text-align: left;
+            text-align: right;
             padding: 20px 0;
         }
 
@@ -150,7 +151,7 @@ export default {
             display: flex;
             flex-direction: column;
             margin: 10px;
-            text-align: left;
+            text-align: right;
             padding: 20px 0;
         }
         

@@ -38,6 +38,7 @@ export default {
   color: #414141;
   font-size: 5em;
   text-align: right;
+  margin-top: 40px;
 }
 
 .description {
