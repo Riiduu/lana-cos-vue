@@ -5,12 +5,7 @@
             <HeaderComponent id="navbar" :btn-click="ShowMenu"/>
             <div class="content">
                 <!-- New components go here -->
-                <NewComponent
-                    :newTitle="'pistavmamm'"
-                    :newDate="'26/09/2022'"
-                    :newDesc="'Es pis tav mamm deguna'"
-                />
-
+                
                 <NewComponent
                     :newTitle="'Something New'"
                     :newDate="'23/09/2022'"
