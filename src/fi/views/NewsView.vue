@@ -5,6 +5,11 @@
             <HeaderComponent id="navbar" :btn-click="ShowMenu"/>
             <div class="content">
                 <!-- New components go here -->
+                <NewComponent
+                    :newTitle="'novi'"
+                    :newDate="'28/09/2022'"
+                    :newDesc="'jhygbjhbytjhnjhyig'"
+                />
 
                 <NewComponent
                     :newTitle="'uutiset'"

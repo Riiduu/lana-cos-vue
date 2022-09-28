@@ -4,6 +4,7 @@
       <div id="hidable">
         <HeaderComponent id="navbar" :btn-click="ShowMenu"/>
         <TitleComponent />
+        <Gallery />
       </div>
   </div>
 </template>
@@ -13,6 +14,7 @@
 import HeaderComponent from '@/en/components/HeaderComponent';
 import MenuBarPhone from "@/en/components/MenuBarPhone";
 import TitleComponent from '../components/HomeComponents/TitleComponent.vue';
+import Gallery from '@/fi/components/HomeComponents/Gallery.vue';
 
 export default {
   name: 'HomeView',
@@ -20,7 +22,8 @@ export default {
     MenuBarPhone,
     // TitleComponent,
     HeaderComponent,
-    TitleComponent
+    TitleComponent,
+    Gallery
 },
   methods: {
     ShowMenu() {
