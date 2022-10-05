@@ -10,7 +10,7 @@
             
             <textarea id="message" type="text" name="message" placeholder="Viesti..."/><br />
         
-            <button id="send-btn" type="submit">Lähettää Viesti</button>
+            <button id="send-btn" type="submit">Lähetä Viesti</button>
         </form>
     </div>
 </template>

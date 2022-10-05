@@ -7,7 +7,7 @@
         <h3 id="main-label" @click="transferHome">LC Studio</h3>
         <label id="options" @click="transferPricing">Hinnoittelu & Tiedot</label>
         <label id="options" @click="transferAbout">Meistä</label>
-        <label id="options" @click="transferNews">Uutiset</label>
+        <label id="options" @click="transferNews">Ajankohtaista</label>
       </div>
 
       <div id="lang-select-div">

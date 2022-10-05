@@ -7,16 +7,16 @@
                 <div class="prices">
                     <div class="left-column">
                         <h1>Miehet</h1>
-                            <label>Optio 1 = 20$</label>
-                            <label>Optio 2 = 35$</label>
-                            <label>Optio 3 = 15$</label>
-                            <label>Optio 4 = 20$</label>
+                            <label>Vaihtoehto 1 = 20$</label>
+                            <label>Vaihtoehto 2 = 35$</label>
+                            <label>Vaihtoehto 3 = 15$</label>
+                            <label>Vaihtoehto 4 = 20$</label>
 
                             <h1>Naiset</h1>
-                                <label>Optio 1 = 20$</label>
-                                <label>Optio 2 = 60$</label>
-                                <label>Optio 3 = 35$</label>
-                                <label>Optio 4 = 10$</label>
+                                <label>Vaihtoehto 1 = 20$</label>
+                                <label>Vaihtoehto 2 = 60$</label>
+                                <label>Vaihtoehto 3 = 35$</label>
+                                <label>Vaihtoehto 4 = 10$</label>
                     </div>
 
                     <div class="right-column">

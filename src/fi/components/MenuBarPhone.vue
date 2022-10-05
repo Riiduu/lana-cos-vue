@@ -3,10 +3,10 @@
     <!-- add language navigation -->
     <label @click="closeMenu" class="closeBtn">X</label>
 
-    <option @click="transferHome" id="menu-option">Koti</option>
+    <option @click="transferHome" id="menu-option">Etusivu</option>
     <option @click="transferPricing" id="menu-option">Hinnoittelu & Tiedot</option>
     <option @click="transferAbout" id="menu-option">Meistä</option>
-    <option @click="transferNews" id="menu-option">Uutiset</option>
+    <option @click="transferNews" id="menu-option">Ajankohtaista</option>
   </div>
 </template>
 
