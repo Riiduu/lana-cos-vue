@@ -4,6 +4,8 @@ import AboutView from '@/fi/views/AboutView'
 import News from '@/fi/views/NewsView'
 import PricingInfo from '@/fi/views/PricingInfoView'
 
+import AdminPanel from '@/en/views/AdminPanel'
+
 import EnHomeView from '@/en/views/HomeView'
 import EnNews from '@/en/views/NewsView'
 import EnPricingInfo from '@/en/views/PricingInfoView'
@@ -32,7 +34,12 @@ const routes = [
     name: 'enPricing',
     component: EnPricingInfo
   },
-  
+  {
+    path: '/en/admin',
+    name: 'AdminPanel',
+    component: AdminPanel
+  },
+
   //Finnish
   {
     path: '/',

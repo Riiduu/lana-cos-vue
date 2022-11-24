@@ -22,6 +22,7 @@
                     :newDesc="'Here is something new because this section is for something new.'"
                 />
             </div>
+        <FooterComponent />
         </div>
     </div>
 </template>
@@ -30,13 +31,15 @@
 import HeaderComponent from '@/en/components/HeaderComponent.vue';
 import MenuBarPhone from '../components/MenuBarPhone.vue';
 import NewComponent from '../components/NewsComponents/New.vue';
+import FooterComponent from '../components/NewsComponents/Footer.vue';
 
 export default {
     name: 'NewsView',
     components: {
     HeaderComponent,
     MenuBarPhone,
-    NewComponent
+    NewComponent,
+    FooterComponent
 },
     methods: {
         ShowMenu() {

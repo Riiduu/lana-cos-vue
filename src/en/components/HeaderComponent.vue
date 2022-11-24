@@ -91,7 +91,7 @@ export default {
   #main-label {
     font-family: 'Playfair Display', serif;
     vertical-align: center;
-    margin-top: -3px;
+    margin-top: -5px;
     font-size: 2rem;
     cursor: pointer;
     transition: all 0.25s ease;
