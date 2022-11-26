@@ -14,12 +14,14 @@
         </div>
       </div>
     </div>
+    <FooterComponent />
   </div>
 </template>
 
 <script>
 import HeaderComponent from "@/fi/components/HeaderComponent.vue";
 import MenuBarPhone from "@/fi/components/MenuBarPhone.vue";
+import FooterComponent from "@/fi/components/NewsComponents/Footer.vue";
 import jsonFile from "@/fi/components/NewsComponents/news.json";
 
 export default {
@@ -27,6 +29,7 @@ export default {
   components: {
     HeaderComponent,
     MenuBarPhone,
+    FooterComponent,
   },
   data() {
     return {
