@@ -9,16 +9,14 @@
 
 <script>
 import router from "@/router";
-let usernameController = document.getElementById("username");
-let passwordController = document.getElementById("password");
 
 export default {
   name: "LoginPage",
   methods: {
     loginSubmit() {
       if (
-        usernameController.value == "svetlana" &&
-        passwordController.value == "password"
+        document.getElementById("username").value == "svetlana" &&
+        document.getElementById("password").value == "password"
       ) {
         alert("Login Successful");
         router.push("/admin");

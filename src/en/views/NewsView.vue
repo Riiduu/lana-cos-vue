@@ -6,21 +6,13 @@
       <div class="content">
         <!-- Mock components -->
 
-        <NewComponent
-          :newTitle="'Something New'"
-          :newDate="'23/09/2022'"
-          :newDesc="'Here is something new because this section is for something new.'"
-        />
-        <NewComponent
-          :newTitle="'Another New'"
-          :newDate="'28/06/2022'"
-          :newDesc="'Here is something new because this section is for something new.'"
-        />
-        <NewComponent
-          :newTitle="`I'm also New`"
-          :newDate="'19/06/2022'"
-          :newDesc="'Here is something new because this section is for something new.'"
-        />
+        <div :key="index" v-for="index in jsonFile" class="new">
+          <div class="top-row">
+            <h3>{{ index.title }}</h3>
+            <label>{{ index.date }}</label>
+          </div>
+          <label>{{ index.text }}</label>
+        </div>
       </div>
       <FooterComponent />
     </div>
@@ -29,16 +21,15 @@
 
 <script>
 import HeaderComponent from "@/en/components/HeaderComponent.vue";
-import MenuBarPhone from "../components/MenuBarPhone.vue";
-import NewComponent from "../components/NewsComponents/New.vue";
-import FooterComponent from "../components/NewsComponents/Footer.vue";
+import MenuBarPhone from "@/en/components/MenuBarPhone.vue";
+import FooterComponent from "@/en/components/NewsComponents/Footer.vue";
+import jsonNews from "@/en/components/NewsComponents/news.json";
 
 export default {
   name: "NewsView",
   components: {
     HeaderComponent,
     MenuBarPhone,
-    NewComponent,
     FooterComponent,
   },
   methods: {
@@ -54,6 +45,11 @@ export default {
       let hidable = document.getElementById("hidable");
       hidable.style.display = "block";
     },
+  },
+  data() {
+    return {
+      jsonFile: jsonNews,
+    };
   },
 };
 </script>
@@ -73,5 +69,29 @@ export default {
   flex-direction: column;
   justify-content: center;
   margin: 100px auto auto auto;
+}
+
+.new {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border: 1px solid gray;
+  padding: 5px 30px 30px 30px;
+  width: 80%;
+  margin: 10px auto;
+  border-radius: 10px;
+  box-shadow: lightgray 2px 3px;
+}
+
+.top-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  label {
+    color: gray;
+    margin-top: 13px;
+  }
 }
 </style>

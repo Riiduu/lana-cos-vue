@@ -7,16 +7,16 @@
         <div class="content">
           <form class="add-news">
             <label>Uutiset suomeksi</label>
-            <input placeholder="Otsikko" />
-            <input placeholder="Teksti" />
-            <input placeholder="Päivämäärä" />
+            <input id="title-fi" placeholder="Otsikko" />
+            <input id="text-fi" placeholder="Teksti" />
+            <input id="date-fi" placeholder="Päivämäärä" />
             <button type="submit">Valmis</button>
           </form>
           <form class="add-news">
             <label>News English</label>
-            <input placeholder="Title" />
-            <input placeholder="Text" />
-            <input placeholder="Date" />
+            <input id="title-en" placeholder="Title" />
+            <input id="text-en" placeholder="Text" />
+            <input id="date-en" placeholder="Date" />
             <button type="submit">Post</button>
           </form>
         </div>
