@@ -1,45 +1,41 @@
 <template>
   <div class="home">
-    <MenuBarPhone id="menu-fs" :close-menu="CloseMenu"/>
-      <div id="hidable">
-        <HeaderComponent id="navbar" :btn-click="ShowMenu"/>
-        <TitleComponent />
-        <Gallery />
-      </div>
+    <MenuBarPhone id="menu-fs" :close-menu="CloseMenu" />
+    <div id="hidable">
+      <HeaderComponent id="navbar" :btn-click="ShowMenu" />
+      <TitleComponent />
+    </div>
   </div>
 </template>
 
 <script>
-
-import HeaderComponent from '@/en/components/HeaderComponent';
+import HeaderComponent from "@/en/components/HeaderComponent";
 import MenuBarPhone from "@/en/components/MenuBarPhone";
-import TitleComponent from '../components/HomeComponents/TitleComponent.vue';
-import Gallery from '@/fi/components/HomeComponents/Gallery.vue';
+import TitleComponent from "@/en/components/HomeComponents/TitleComponent.vue";
 
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   components: {
     MenuBarPhone,
     // TitleComponent,
     HeaderComponent,
     TitleComponent,
-    Gallery
-},
+  },
   methods: {
     ShowMenu() {
-      let dropMenu = document.getElementById('menu-fs');
+      let dropMenu = document.getElementById("menu-fs");
       dropMenu.style.display = "flex";
-      let hidable = document.getElementById('hidable');
+      let hidable = document.getElementById("hidable");
       hidable.style.display = "none";
     },
     CloseMenu() {
-      let dropMenu = document.getElementById('menu-fs');
+      let dropMenu = document.getElementById("menu-fs");
       dropMenu.style.display = "none";
-      let hidable = document.getElementById('hidable');
+      let hidable = document.getElementById("hidable");
       hidable.style.display = "block";
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>

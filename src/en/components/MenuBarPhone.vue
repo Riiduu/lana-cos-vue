@@ -3,6 +3,7 @@
     <label @click="closeMenu" class="closeBtn">X</label>
 
     <option @click="transferHome" id="menu-option">Home</option>
+    <option @click="transferGallery" id="menu-option">Gallery</option>
     <option @click="transferPricing" id="menu-option">Pricing</option>
     <option @click="transferAbout" id="menu-option">About us</option>
     <option @click="transferNews" id="menu-option">News</option>
@@ -10,7 +11,7 @@
 </template>
 
 <script>
-import router from '@/router';
+import router from "@/router";
 
 export default {
   name: "MenuBarPhone",
@@ -19,19 +20,22 @@ export default {
   },
   methods: {
     transferHome() {
-      router.push('/')
+      router.push("/");
     },
     transferPricing() {
-      router.push('en/pricing')
+      router.push("en/pricing");
     },
     transferAbout() {
-      router.push('en/about')
+      router.push("en/about");
     },
     transferNews() {
-      router.push('en/news')
-    }
-  }
-}
+      router.push("en/news");
+    },
+    transferGallery() {
+      router.push("en/gallery");
+    },
+  },
+};
 </script>
 
 <style scoped>

@@ -3,6 +3,7 @@ import HomeView from "@/fi/views/HomeView";
 import AboutView from "@/fi/views/AboutView";
 import News from "@/fi/views/NewsView";
 import PricingInfo from "@/fi/views/PricingInfoView";
+import Gallery from "@/fi/views/GalleryView";
 
 import AdminPanel from "@/adminPanel/AdminPanel";
 import LoginPage from "@/adminPanel/LoginPage";
@@ -11,6 +12,7 @@ import EnHomeView from "@/en/views/HomeView";
 import EnNews from "@/en/views/NewsView";
 import EnPricingInfo from "@/en/views/PricingInfoView";
 import EnAboutView from "@/en/views/AboutView";
+import EnGallery from "@/en/views/GalleryView";
 
 const routes = [
   //English
@@ -33,6 +35,11 @@ const routes = [
     path: "/en/pricing",
     name: "enPricing",
     component: EnPricingInfo,
+  },
+  {
+    path: "/en/gallery",
+    name: "enGallery",
+    component: EnGallery,
   },
 
   //ADMIN PAGES
@@ -67,6 +74,11 @@ const routes = [
     path: "/pricing",
     name: "pricing",
     component: PricingInfo,
+  },
+  {
+    path: "/gallery",
+    name: "gallery",
+    component: Gallery,
   },
 ];
 

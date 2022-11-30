@@ -10,6 +10,7 @@
       <h3 class="logo-label" @click="transferHome">LC Studio</h3>
       <div class="nav-options">
         <h3 id="main-label" @click="transferHome">LC Studio</h3>
+        <label id="options" @click="transferGallery">Gallery</label>
         <label id="options" @click="transferPricing">Pricing & Info</label>
         <label id="options" @click="transferAbout">About us</label>
         <label id="options" @click="transferNews">News</label>
@@ -51,6 +52,9 @@ export default {
     },
     transferFi() {
       router.push("/");
+    },
+    transferGallery() {
+      router.push("/en/gallery");
     },
   },
 };
@@ -96,7 +100,7 @@ export default {
 #main-label {
   font-family: "Playfair Display", serif;
   vertical-align: center;
-  margin-top: -5px;
+  margin-top: -2px;
   font-size: 2rem;
   cursor: pointer;
   transition: all 0.25s ease;

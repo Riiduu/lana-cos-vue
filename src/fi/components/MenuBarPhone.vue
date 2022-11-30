@@ -4,14 +4,18 @@
     <label @click="closeMenu" class="closeBtn">X</label>
 
     <option @click="transferHome" id="menu-option">Etusivu</option>
-    <option @click="transferPricing" id="menu-option">Hinnoittelu & Tiedot</option>
+    <option @click="transferGallery" id="menu-option">Galleria</option>
+
+    <option @click="transferPricing" id="menu-option">
+      Hinnoittelu & Tiedot
+    </option>
     <option @click="transferAbout" id="menu-option">Meistä</option>
     <option @click="transferNews" id="menu-option">Ajankohtaista</option>
   </div>
 </template>
 
 <script>
-import router from '@/router';
+import router from "@/router";
 
 export default {
   name: "MenuBarPhone",
@@ -20,19 +24,22 @@ export default {
   },
   methods: {
     transferHome() {
-      router.push('/')
+      router.push("/");
     },
     transferPricing() {
-      router.push('/pricing')
+      router.push("/pricing");
     },
     transferAbout() {
-      router.push('/about')
+      router.push("/about");
     },
     transferNews() {
-      router.push('/news')
-    }
-  }
-}
+      router.push("/news");
+    },
+    transferGallery() {
+      router.push("/gallery");
+    },
+  },
+};
 </script>
 
 <style scoped>
