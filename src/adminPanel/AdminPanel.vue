@@ -27,7 +27,7 @@
             <h3>Remove News</h3>
             <div class="news" :key="index" v-for="index in enNews">
               <label>{{ index.title }}</label>
-              <span @click="deleteNews" id="delete-new">X</span>
+              <span class="delete-new">X</span>
             </div>
           </div>
         </div>
@@ -37,9 +37,11 @@
 </template>
 
 <script>
+import axios from "axios";
+
 import HeaderComponent from "@/en/components/HeaderComponent.vue";
 import MenuBarPhone from "@/en/components/MenuBarPhone.vue";
-import enJsonFile from "@/en/components/NewsComponents/news.json";
+import enJsonFile from "@/backend/enNews.json";
 // import fiJsonFile from "@/fi/components/NewsComponents/news.json";
 
 export default {
@@ -47,10 +49,7 @@ export default {
   data() {
     return {
       enNews: enJsonFile,
-      new: {
-        title: document.getElementById("title-en"),
-        text: document.getElementById("text-en"),
-      },
+      User: {},
     };
   },
   components: {
@@ -59,11 +58,31 @@ export default {
   },
   methods: {
     addEnNews() {
-      this.enNews.push(this.new.title.value, this.new.text.value);
-      alert(this.new);
+      let title = document.getElementById("title-en").value;
+      let text = document.getElementById("text-en").value;
+      let date = document.getElementById("date-en").value;
+
+      let enNew = {
+        title: title,
+        text: text,
+        date: date,
+      };
+
+      this.enNews.push(enNew);
     },
     addFiNews() {},
     deleteNews() {},
+  },
+  mounted() {
+    axios
+      .get("http://localhost:3000/")
+      .then((response) => {
+        console.log(response.data);
+        this.User = response.data;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   },
 };
 </script>
@@ -117,7 +136,7 @@ export default {
   padding: auto 10px;
 }
 
-#delete-new {
+.delete-new {
   cursor: pointer;
   color: red;
 }

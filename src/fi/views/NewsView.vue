@@ -22,7 +22,7 @@
 import HeaderComponent from "@/fi/components/HeaderComponent.vue";
 import MenuBarPhone from "@/fi/components/MenuBarPhone.vue";
 import FooterComponent from "@/fi/components/NewsComponents/Footer.vue";
-import jsonFile from "@/fi/components/NewsComponents/news.json";
+import jsonFile from "@/backend/fiNews.json";
 
 export default {
   name: "NewsView",
