@@ -20,7 +20,7 @@
               <input id="title-en" placeholder="Title" />
               <input id="text-en" placeholder="Text" />
               <input id="date-en" placeholder="Date" />
-              <button type="submit" @click="addEnNews">Post</button>
+              <button type="submit" @click="addEnNews()">Post</button>
             </form>
           </div>
           <div class="removeNewsSection">
@@ -58,17 +58,7 @@ export default {
   },
   methods: {
     addEnNews() {
-      let title = document.getElementById("title-en").value;
-      let text = document.getElementById("text-en").value;
-      let date = document.getElementById("date-en").value;
-
-      let enNew = {
-        title: title,
-        text: text,
-        date: date,
-      };
-
-      this.enNews.push(enNew);
+      var array;
     },
     addFiNews() {},
     deleteNews() {},
