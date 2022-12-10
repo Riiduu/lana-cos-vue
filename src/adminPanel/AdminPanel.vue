@@ -24,11 +24,14 @@
             </form>
           </div>
           <div class="removeNewsSection">
-            <h3>Remove News</h3>
-            <div class="news" :key="index" v-for="index in enNews">
-              <label>{{ index.title }}</label>
-              <span class="delete-new">X</span>
+            <div class="en-news">
+              <h3>Remove News</h3>
+              <div class="news" :key="index" v-for="index in enNews">
+                <label>{{ index.title }}</label>
+                <span class="delete-new">X</span>
+              </div>
             </div>
+            <div class="fi-news"></div>
           </div>
         </div>
       </div>
@@ -37,42 +40,40 @@
 </template>
 
 <script>
-import axios from "axios";
-
 import HeaderComponent from "@/en/components/HeaderComponent.vue";
 import MenuBarPhone from "@/en/components/MenuBarPhone.vue";
-import enJsonFile from "@/backend/enNews.json";
-// import fiJsonFile from "@/fi/components/NewsComponents/news.json";
+import { collection, getDocs } from "firebase/firestore";
+
+import { db } from "@/firebase/index.js";
 
 export default {
   name: "AdminPanel",
-  data() {
-    return {
-      enNews: enJsonFile,
-      User: {},
-    };
-  },
   components: {
     MenuBarPhone,
     HeaderComponent,
   },
-  methods: {
-    addEnNews() {
-      var array;
-    },
-    addFiNews() {},
-    deleteNews() {},
+  data() {
+    return {
+      enNews: [],
+    };
   },
-  mounted() {
-    axios
-      .get("http://localhost:3000/")
-      .then((response) => {
-        console.log(response.data);
-        this.User = response.data;
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  async mounted() {
+    const querySnapshot = await getDocs(collection(db, "enNews"));
+    let dbNews = [];
+
+    querySnapshot.forEach((dbitem) => {
+      // doc.data() is never undefined for query doc snapshots
+      console.log(dbitem.id, " => ", dbitem.data());
+      const newContent = {
+        id: dbitem.id,
+        newsText: dbitem.data().newsText,
+        date: dbitem.data().date,
+        title: dbitem.data().title,
+      };
+      dbNews.push(newContent);
+
+      this.enNews = dbNews;
+    });
   },
 };
 </script>

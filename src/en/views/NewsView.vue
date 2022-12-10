@@ -6,12 +6,12 @@
       <div class="content">
         <!-- Mock components -->
 
-        <div :key="index" v-for="index in jsonFile" class="new">
+        <div :key="index" v-for="index in news" class="new">
           <div class="top-row">
             <h3>{{ index.title }}</h3>
             <label>{{ index.date }}</label>
           </div>
-          <label>{{ index.text }}</label>
+          <label>{{ index.newsText }}</label>
         </div>
       </div>
       <FooterComponent />
@@ -23,7 +23,9 @@
 import HeaderComponent from "@/en/components/HeaderComponent.vue";
 import MenuBarPhone from "@/en/components/MenuBarPhone.vue";
 import FooterComponent from "@/en/components/NewsComponents/Footer.vue";
-import jsonNews from "@/backend/enNews.json";
+import { collection, getDocs } from "firebase/firestore";
+
+import { db } from "@/firebase/index.js";
 
 export default {
   name: "NewsView",
@@ -48,8 +50,26 @@ export default {
   },
   data() {
     return {
-      jsonFile: jsonNews,
+      news: [],
     };
+  },
+  async mounted() {
+    const querySnapshot = await getDocs(collection(db, "enNews"));
+    let dbNews = [];
+
+    querySnapshot.forEach((dbitem) => {
+      // doc.data() is never undefined for query doc snapshots
+      console.log(dbitem.id, " => ", dbitem.data());
+      const newContent = {
+        id: dbitem.id,
+        newsText: dbitem.data().newsText,
+        date: dbitem.data().date,
+        title: dbitem.data().title,
+      };
+      dbNews.push(newContent);
+
+      this.news = dbNews;
+    });
   },
 };
 </script>
