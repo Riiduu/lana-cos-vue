@@ -28,14 +28,18 @@
               <h3>Remove News English</h3>
               <div class="news" :key="index" v-for="index in enNews">
                 <label>{{ index.title }}</label>
-                <span class="delete-new">X</span>
+                <span @click="deleteNewsEn(index.id)" class="delete-new"
+                  >X</span
+                >
               </div>
             </div>
             <div class="fi-news">
               <h3>Remove News Finnish</h3>
               <div class="news" :key="index" v-for="index in fiNews">
                 <label>{{ index.title }}</label>
-                <span class="delete-new">X</span>
+                <span @click="deleteNewsFi(index.id)" class="delete-new"
+                  >X</span
+                >
               </div>
             </div>
           </div>
@@ -49,7 +53,13 @@
 import { ref } from "vue";
 import HeaderComponent from "@/en/components/HeaderComponent.vue";
 import MenuBarPhone from "@/en/components/MenuBarPhone.vue";
-import { collection, addDoc, onSnapshot } from "firebase/firestore";
+import {
+  collection,
+  addDoc,
+  onSnapshot,
+  deleteDoc,
+  doc,
+} from "firebase/firestore";
 
 import { db } from "@/firebase/index.js";
 
@@ -72,6 +82,8 @@ export default {
       fiTitle: ref(""),
       fiText: ref(""),
       fiDate: ref(""),
+      enNewsCollection: collection(db, "enNews"),
+      fiNewsCollection: collection(db, "fiNews"),
     };
   },
   methods: {
@@ -88,6 +100,12 @@ export default {
         newsText: this.fiText,
         date: this.fiDate,
       });
+    },
+    deleteNewsEn(id) {
+      deleteDoc(doc(this.enNewsCollection, id));
+    },
+    deleteNewsFi(id) {
+      deleteDoc(doc(this.fiNewsCollection, id));
     },
   },
   async mounted() {
