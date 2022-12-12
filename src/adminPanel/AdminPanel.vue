@@ -93,6 +93,10 @@ export default {
         newsText: this.enText,
         date: this.enDate,
       });
+
+      this.enTitle = ref("");
+      this.enText = ref("");
+      this.enDate = ref("");
     },
     addFiNews() {
       addDoc(collection(db, "fiNews"), {
@@ -100,6 +104,9 @@ export default {
         newsText: this.fiText,
         date: this.fiDate,
       });
+      this.fiTitle = ref("");
+      this.fiText = ref("");
+      this.fiDate = ref("");
     },
     deleteNewsEn(id) {
       deleteDoc(doc(this.enNewsCollection, id));
@@ -201,15 +208,46 @@ export default {
   color: red;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 400px) {
   .content {
     display: flex;
     flex-direction: column;
     margin: 100px auto;
   }
 
+  .forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .add-news {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    input {
+      width: 90vw;
+    }
+
+    button {
+      width: 90vw;
+      height: 50px;
+    }
+  }
+
   .add-news {
     margin: 50px auto;
+  }
+
+  .removeNewsSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    width: 200px;
   }
 }
 </style>
