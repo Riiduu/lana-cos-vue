@@ -7,31 +7,37 @@
       <div id="hidable">
         <HeaderComponent id="navbar" :btn-click="ShowMenu" />
         <div class="content">
-          <div class="forms">
+          <div class="forms" @submit.prevent>
             <form class="add-news">
               <label>Uutiset suomeksi</label>
-              <input id="title-fi" placeholder="Otsikko" />
-              <input id="text-fi" placeholder="Teksti" />
-              <input id="date-fi" placeholder="Päivämäärä" />
+              <input id="title-fi" v-model="fiTitle" placeholder="Otsikko" />
+              <input id="text-fi" v-model="fiText" placeholder="Teksti" />
+              <input id="date-fi" v-model="fiDate" placeholder="Päivämäärä" />
               <button type="submit" @click="addFiNews">Valmis</button>
             </form>
             <form class="add-news">
               <label>News English</label>
-              <input id="title-en" placeholder="Title" />
-              <input id="text-en" placeholder="Text" />
-              <input id="date-en" placeholder="Date" />
-              <button type="submit" @click="addEnNews()">Post</button>
+              <input id="title-en" v-model="enTitle" placeholder="Title" />
+              <input id="text-en" v-model="enText" placeholder="Text" />
+              <input id="date-en" v-model="enDate" placeholder="Date" />
+              <button type="submit" @click="addEnNews">Post</button>
             </form>
           </div>
           <div class="removeNewsSection">
             <div class="en-news">
-              <h3>Remove News</h3>
+              <h3>Remove News English</h3>
               <div class="news" :key="index" v-for="index in enNews">
                 <label>{{ index.title }}</label>
                 <span class="delete-new">X</span>
               </div>
             </div>
-            <div class="fi-news"></div>
+            <div class="fi-news">
+              <h3>Remove News Finnish</h3>
+              <div class="news" :key="index" v-for="index in fiNews">
+                <label>{{ index.title }}</label>
+                <span class="delete-new">X</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -40,9 +46,10 @@
 </template>
 
 <script>
+import { ref } from "vue";
 import HeaderComponent from "@/en/components/HeaderComponent.vue";
 import MenuBarPhone from "@/en/components/MenuBarPhone.vue";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, addDoc, onSnapshot } from "firebase/firestore";
 
 import { db } from "@/firebase/index.js";
 
@@ -55,24 +62,67 @@ export default {
   data() {
     return {
       enNews: [],
+      fiNews: [],
+      //English
+      enTitle: ref(""),
+      enText: ref(""),
+      enDate: ref(""),
+
+      //Finnish
+      fiTitle: ref(""),
+      fiText: ref(""),
+      fiDate: ref(""),
     };
   },
+  methods: {
+    addEnNews() {
+      addDoc(collection(db, "enNews"), {
+        title: this.enTitle,
+        newsText: this.enText,
+        date: this.enDate,
+      });
+    },
+    addFiNews() {
+      addDoc(collection(db, "fiNews"), {
+        title: this.fiTitle,
+        newsText: this.fiText,
+        date: this.fiDate,
+      });
+    },
+  },
   async mounted() {
-    const querySnapshot = await getDocs(collection(db, "enNews"));
-    let dbNews = [];
+    //English
 
-    querySnapshot.forEach((dbitem) => {
-      // doc.data() is never undefined for query doc snapshots
-      console.log(dbitem.id, " => ", dbitem.data());
-      const newContent = {
-        id: dbitem.id,
-        newsText: dbitem.data().newsText,
-        date: dbitem.data().date,
-        title: dbitem.data().title,
-      };
-      dbNews.push(newContent);
+    onSnapshot(collection(db, "fiNews"), (querySnapshot) => {
+      let fiDbNews = [];
 
-      this.enNews = dbNews;
+      querySnapshot.forEach((dbitem) => {
+        const newContent = {
+          id: dbitem.id,
+          newsText: dbitem.data().newsText,
+          date: dbitem.data().date,
+          title: dbitem.data().title,
+        };
+        fiDbNews.push(newContent);
+
+        this.fiNews = fiDbNews;
+      });
+    });
+
+    onSnapshot(collection(db, "enNews"), (querySnapshot) => {
+      let enDbNews = [];
+
+      querySnapshot.forEach((dbitem) => {
+        const newContent = {
+          id: dbitem.id,
+          newsText: dbitem.data().newsText,
+          date: dbitem.data().date,
+          title: dbitem.data().title,
+        };
+        enDbNews.push(newContent);
+
+        this.enNews = enDbNews;
+      });
     });
   },
 };
@@ -111,11 +161,12 @@ export default {
 
 .removeNewsSection {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
 .news {
+  margin: 0 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
