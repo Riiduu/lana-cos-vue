@@ -10,11 +10,6 @@
         <label>{{ personEmail }}</label>
         <label>{{ personSocial }}</label>
       </div>
-      <!-- <div class="person-education">
-                <label>{{ education1 }}</label>
-                <label>{{ education2 }}</label>
-                <label>{{ education3 }}</label>
-            </div> -->
     </div>
     <div class="mobile-info">
       <div class="mobile-img">
@@ -26,11 +21,6 @@
         <label>{{ personEmail }}</label>
         <label>{{ personSocial }}</label>
       </div>
-      <!-- <div class="mobile-education">
-        <label>{{ education1 }}</label>
-        <label>{{ education2 }}</label>
-        <label>{{ education3 }}</label>
-      </div> -->
     </div>
   </div>
 </template>
@@ -45,10 +35,6 @@ export default {
     personPhone: String,
     personEmail: String,
     personSocial: String,
-
-    education1: String,
-    education2: String,
-    education3: String,
   },
 };
 </script>

@@ -13,9 +13,6 @@
             :personPhone="'+358 0445107254'"
             :personEmail="`lanacosexpress@gmail.com`"
             :personSocial="'IG: @lana.cos.hair'"
-            :education1="'Turku barber collage'"
-            :education2="'Helsinki barber collage'"
-            :education3="'K-Market pelmen maker collage'"
           />
 
           <PersonInfo
@@ -24,9 +21,6 @@
             :personPhone="'+358 0475893749'"
             :personEmail="`janedoe@gmail.com`"
             :personSocial="'IG: @janedoe'"
-            :education1="'Turku barber collage'"
-            :education2="'Helsinki barber collage'"
-            :education3="'K-Market pelmen maker collage'"
           />
         </div>
 
