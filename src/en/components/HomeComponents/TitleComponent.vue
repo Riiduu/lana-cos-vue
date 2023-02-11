@@ -46,7 +46,7 @@ export default {
   text-align: right;
   color: black;
   font-size: larger;
-  margin-top: -30px;
+  margin-top: 20px;
 }
 
 .button-holder {
