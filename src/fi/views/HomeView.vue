@@ -3,7 +3,15 @@
     <MenuBarPhone id="menu-fs" :close-menu="CloseMenu"/>
       <div id="hidable">
         <HeaderComponent id="navbar" :btn-click="ShowMenu"/>
-        <TitleComponent />
+        <div class="content">
+          <TitleComponent />
+          <div class="additional-text">
+            <h1>PALJASTAMME KAUNEUTESI KAIKKI PUOLET</h1>
+            <label>Kauneussalonkimme on juuri se paikka, johon olet aina tervetullut ja jossa voit viettää aikasi viihtyen, sekä rentoutua ja piristäytyä. 
+Työskentelemme vain parhailla raaka-aineilla, ottaen huomioon jokaisen asiakkaan yksilölliset toiveet.</label>
+          </div>
+        </div>
+        
       </div>
   </div>
 </template>
@@ -43,7 +51,21 @@ export default {
 .home {
   background-image: url("@/assets/images/home-bg.jpg");
   max-width: 100%;
-  height: 100vh;
+  height: auto;
+  background-color: pink;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.additional-text {
+  margin: 110px 80px 80px 80px;
+  display: flex;
+  flex-direction: column;
+  height: 73vh;
+  width: 60%;
 }
 
 #navbar {
@@ -53,4 +75,20 @@ export default {
 #menu-fs {
   display: none;
 }
+
+@media (max-width: 700px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    margin: 0;
+  }
+
+  .additional-text {
+    margin: 10px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
 </style>

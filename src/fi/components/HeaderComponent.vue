@@ -145,7 +145,7 @@ export default {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .nav-options {
     margin-left: 0px;
     right: 0px;

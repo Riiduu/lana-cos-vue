@@ -46,11 +46,11 @@ export default {
 
 .desktop-info {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .person-info {
-  min-height: 200px;
+  min-height: 180px;
   width: auto;
   border: 1px solid gray;
   display: flex;

@@ -8,19 +8,10 @@
 
         <div class="worker-cards">
           <PersonInfo
-            :personImg="'svetlana.jpg'"
+            :personImg="'lana-3.jpeg'"
             :personName="'Svetlana Klementyeva'"
             :personPhone="'+358 0445107254'"
-            :personEmail="`lanacosexpress@gmail.com`"
             :personSocial="'IG: @lana.cos.hair'"
-          />
-
-          <PersonInfo
-            :personImg="'woman-1.jpg'"
-            :personName="'Jane Doe'"
-            :personPhone="'+358 0475893749'"
-            :personEmail="`janedoe@gmail.com`"
-            :personSocial="'IG: @janedoe'"
           />
         </div>
 

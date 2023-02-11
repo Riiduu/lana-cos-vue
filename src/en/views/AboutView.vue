@@ -6,42 +6,11 @@
           <div class="content">
             <Socials />
             <PersonInfo 
-              :personImg="'svetlana.jpg'"
+              :personImg="'lana-3.jpg'"
 
               :personName="'Svetlana Klementyeva'"
               :personPhone="'+358 0445107254'"
-              :personEmail="`lanacosexpress@gmail.com`"  
               :personSocial="'IG: @lana.cos.hair'"
-
-              :education1="'Turku barber collage'"
-              :education2="'Helsinki barber collage'"
-              :education3="'K-Market pelmen maker collage'"
-            />
-
-            <!-- <PersonInfo 
-              :personImg="'svetlana.jpg'"
-
-              :personName="'John Doe'"
-              :personPhone="'+358 0476917465'"
-              :personEmail="`johndoe@gmail.com`"  
-              :personSocial="'IG: @johndoe'"
-
-              :education1="'Cheeseburger collage'"
-              :education2="'Helsinki barber collage'"
-              :education3="'Tai chi professional school'"
-            /> -->
-
-            <PersonInfo 
-              :personImg="'woman-1.jpg'"
-
-              :personName="'Jane Doe'"
-              :personPhone="'+358 0476917465'"
-              :personEmail="`janedoe@gmail.com`"  
-              :personSocial="'IG: @janedoe'"
-
-              :education1="'Cheeseburger collage'"
-              :education2="'Helsinki barber collage'"
-              :education3="'Tai chi professional school'"
             />
 
             <SendEmail />  

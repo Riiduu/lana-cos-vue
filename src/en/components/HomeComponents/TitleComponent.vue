@@ -31,26 +31,27 @@ export default {
   display: flex;
   flex-direction: column;
   height: 73vh;
+  width: 60%;
 }
 
 .title {
   font-family: 'Playfair Display', serif;
   color: #414141;
   font-size: 5em;
-  text-align: right;
+  text-align: left;
   margin-top: 40px;
 }
 
 .description {
   font-family: 'Roboto Slab', serif;
-  text-align: right;
+  text-align: left;
   color: black;
   font-size: larger;
   margin-top: 20px;
 }
 
 .button-holder {
-  justify-content: center;
+  justify-content: left;
   text-align: center;
   vertical-align: bottom;
   display: flex;
@@ -93,8 +94,15 @@ export default {
 }
 
 @media (max-width: 430px) {
-  .title-content {
-    margin: 100px 10%;
+  .title-component {
+    display: flex;
+    margin: 100px 5%;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .button-holder {
+    justify-content: center;
   }
 }
 </style>
