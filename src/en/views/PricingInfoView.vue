@@ -6,18 +6,9 @@
             <div class="content">
                 <div class="prices">
                     <h1>Haircut</h1>
-                    <h3>Regular haircut ~ 35€</h3>
-                    <h3>Model haircut ~ 55€</h3>
-                    <h3>Barber ~ 20-25€</h3>
-                    <h3>Children haircut ~ 20€</h3>
-                    <h3>Smoothing ~ 30€</h3>
-                    <h3>Forehead ~ 15€</h3>
-                    <h3>Machine cut ~ 15€</h3>
-                    <h3>Washing ~ 10-15€</h3>
-                    <h3>
-                        Head massage (10min), washing<br />
-                        and blow-drying ~ 50€
-                    </h3>
+                    <div :key="index" v-for="index in prices" class="prices">
+                        <h3>{{ index.type }}</h3> - <h3>{{ index.price }}$</h3>
+                    </div>
                     <hr />
 
                     <h1>Coloring</h1>
@@ -115,6 +106,9 @@
 import HeaderComponent from "@/en/components/HeaderComponent.vue";
 import MenuBarPhone from "../components/MenuBarPhone.vue";
 
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "@/firebase/index.js";
+
 export default {
     name: "PricingView",
     components: {
@@ -135,6 +129,30 @@ export default {
             hidable.style.display = "block";
         },
     },
+    data() {
+        return {
+            prices: []
+        }
+    },
+    async mounted() {
+        const querySnapshot = await getDocs(collection(db, "prices-en"));
+
+        const database = await getDocs(collection(Haircut, "Haircuts"))
+        let prices = [];
+
+        database.forEach((dbitem) => {
+            console.log(dbitem.id, " => ", dbitem.data());
+            const newContent = {
+                id: dbitem.id,
+                cutType: dbitem.data().type,
+                cutPrice: dbitem.data().price,
+            }
+
+            prices.push(newContent);
+
+            this.prices = prices;
+        })
+    }
 };
 </script>
 
