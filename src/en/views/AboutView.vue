@@ -6,7 +6,7 @@
           <div class="content">
             <Socials />
             <PersonInfo 
-              :personImg="'lana-3.jpg'"
+              :personImg="'lana-3.jpeg'"
 
               :personName="'Svetlana Klementyeva'"
               :personPhone="'+358 0445107254'"

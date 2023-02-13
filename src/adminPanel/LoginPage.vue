@@ -2,7 +2,7 @@
   <div class="login-page">
     <h1>Login Page</h1>
     <input id="username" placeholder="Username" />
-    <input id="password" placeholder="password" />
+    <input id="password" type="password" placeholder="password" />
     <button @click="loginSubmit">Login</button>
   </div>
 </template>

@@ -1,46 +1,43 @@
 <template>
-    <div class="person-info">
-      <div class="desktop-info">
-        <div class="person-img">
-          <img :src="require(`@/assets/images/${personImg}`)" />
-        </div>
-        <div class="person-personal-info">
-          <label>{{ personName }}</label>
-          <label>{{ personPhone }}</label>
-          <label>{{ personEmail }}</label>
-          <label>{{ personSocial }}</label>
-        </div>
+  <div class="person-info">
+    <div class="desktop-info">
+      <div class="person-img">
+        <img :src="require(`@/assets/images/${personImg}`)" />
       </div>
-      <div class="mobile-info">
-        <div class="mobile-img">
-          <img :src="require(`@/assets/images/${personImg}`)" />
-        </div>
-        <div class="mobile-personal-info">
-          <label>{{ personName }}</label>
-          <label>{{ personPhone }}</label>
-          <label>{{ personEmail }}</label>
-          <label>{{ personSocial }}</label>
-        </div>
+      <div class="person-personal-info">
+        <label>{{ personName }}</label>
+        <label>{{ personPhone }}</label>
+        <label>{{ personSocial }}</label>
       </div>
     </div>
-  </template>
+    <div class="mobile-info">
+      <div class="mobile-img">
+        <img :src="require(`@/assets/images/${personImg}`)" />
+      </div>
+      <div class="mobile-personal-info">
+        <label>{{ personName }}</label>
+        <label>{{ personPhone }}</label>
+        <label>{{ personSocial }}</label>
+      </div>
+    </div>
+  </div>
+</template>
 
 <script>
 export default {
-    name: 'PersonInfo',
-    props: {
-        personImg: String,
+  name: "PersonInfo",
+  props: {
+    personImg: String,
 
-        personName: String,
-        personPhone: String,
-        personEmail: String,
-        personSocial: String,
-    }
-}
+    personName: String,
+    personPhone: String,
+    personSocial: String,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-    .mobile-info {
+.mobile-info {
   display: none;
 }
 
@@ -50,7 +47,7 @@ export default {
 }
 
 .person-info {
-  min-height: 180px;
+  height: 230px;
   width: auto;
   border: 1px solid gray;
   display: flex;
@@ -65,12 +62,10 @@ export default {
 }
 
 .person-img {
-  margin: auto auto auto auto;
-  width: 150px;
   vertical-align: middle;
 
   img {
-    width: 100%;
+    height: 230px;
   }
 }
 

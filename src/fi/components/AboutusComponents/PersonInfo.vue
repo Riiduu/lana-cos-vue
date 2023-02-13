@@ -7,7 +7,6 @@
       <div class="person-personal-info">
         <label>{{ personName }}</label>
         <label>{{ personPhone }}</label>
-        <label>{{ personEmail }}</label>
         <label>{{ personSocial }}</label>
       </div>
     </div>
@@ -18,7 +17,6 @@
       <div class="mobile-personal-info">
         <label>{{ personName }}</label>
         <label>{{ personPhone }}</label>
-        <label>{{ personEmail }}</label>
         <label>{{ personSocial }}</label>
       </div>
     </div>
@@ -33,7 +31,6 @@ export default {
 
     personName: String,
     personPhone: String,
-    personEmail: String,
     personSocial: String,
   },
 };
@@ -50,7 +47,7 @@ export default {
 }
 
 .person-info {
-  min-height: 180px;
+  height: 230px;
   width: auto;
   border: 1px solid gray;
   display: flex;
@@ -65,12 +62,10 @@ export default {
 }
 
 .person-img {
-  margin: auto auto auto auto;
-  width: 150px;
   vertical-align: middle;
 
   img {
-    width: 100%;
+    height: 230px;
   }
 }
 

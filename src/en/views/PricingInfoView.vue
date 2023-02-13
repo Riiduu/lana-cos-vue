@@ -10,8 +10,8 @@
                     <h3>Model haircut ~ 55€</h3>
                     <h3>Barber ~ 20-25€</h3>
                     <h3>Children haircut ~ 20€</h3>
-                    <h3>? Smoothing ~ 30€</h3>
-                    <h3>? Forehead ~ 15€</h3>
+                    <h3>Smoothing ~ 30€</h3>
+                    <h3>Forehead ~ 15€</h3>
                     <h3>Machine cut ~ 15€</h3>
                     <h3>Washing ~ 10-15€</h3>
                     <h3>
@@ -50,7 +50,7 @@
                             the ends ~ from 130€</span
                         >
                     </h3>
-                    <h3>? Color removal including coloring ~ from 150-350€</h3>
+                    <h3>Color removal including coloring ~ from 150-350€</h3>
                     <hr />
                     <h1>Stripes and Clipping and Coloring</h1>
                     <h3>Short ~ 100€</h3>
@@ -65,7 +65,7 @@
                     <h3>Long ~ 120€</h3>
                     <h3>Extra long ~ 140€</h3>
                     <br />
-                    <h3>? Airtouch, shatoosh 60€/h (5t) ~ 170-400€</h3>
+                    <h3>Airtouch, shatoosh 60€/h (5t) ~ 170-400€</h3>
                     <hr />
                     <h1>Permanent (including cut)</h1>
                     <h3>Short ~ 90€</h3>
