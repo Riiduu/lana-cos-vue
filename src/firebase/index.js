@@ -6,13 +6,21 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
+
   apiKey: "AIzaSyAiaAX0EXftKnwyjehHP4LtXPbNHdYx0t8",
+
   authDomain: "lana-cos-877a1.firebaseapp.com",
+
   projectId: "lana-cos-877a1",
+
   storageBucket: "lana-cos-877a1.appspot.com",
+
   messagingSenderId: "282381418168",
-  appId: "1:282381418168:web:6185d991c621ef5804be4d",
+
+  appId: "1:282381418168:web:6185d991c621ef5804be4d"
+
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

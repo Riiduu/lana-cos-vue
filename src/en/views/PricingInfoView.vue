@@ -5,11 +5,15 @@
             <HeaderComponent id="navbar" :btn-click="ShowMenu" />
             <div class="content">
                 <div class="prices">
+
+                    <!-- Needed On Every Type -->
                     <h1>Haircut</h1>
-                    <div :key="index" v-for="index in prices" class="prices">
-                        <h3>{{ index.type }}</h3> - <h3>{{ index.price }}$</h3>
-                    </div>
+                        <div :key="index" v-for="index in prices" class="price">
+                            <h3>{{ index.cutType }} ~ {{ index.cutPrice }}$</h3>
+                        </div>
                     <hr />
+                    <!-- Needed On Every Type -->
+
 
                     <h1>Coloring</h1>
                     <h3>Short ~ 95€</h3>
@@ -135,12 +139,14 @@ export default {
         }
     },
     async mounted() {
-        const querySnapshot = await getDocs(collection(db, "prices-en"));
+        // const querySnapshot = await getDocs(collection(db, "prices-en"));
 
-        const database = await getDocs(collection(Haircut, "Haircuts"))
+        const Haircuts = await getDocs(collection(db, "prices-en/Haircut/Haircuts"))
         let prices = [];
 
-        database.forEach((dbitem) => {
+
+        // For every Section
+        Haircuts.forEach((dbitem) => {
             console.log(dbitem.id, " => ", dbitem.data());
             const newContent = {
                 id: dbitem.id,
