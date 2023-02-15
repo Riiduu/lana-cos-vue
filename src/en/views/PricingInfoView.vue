@@ -8,89 +8,81 @@
 
                     <!-- Needed On Every Type -->
                     <h1>Haircut</h1>
-                        <div :key="index" v-for="index in prices" class="price">
-                            <h3>{{ index.cutType }} ~ {{ index.cutPrice }}$</h3>
+                        <div :key="index" v-for="index in hairPrices" class="price">
+                            <h3>{{ index.cutType }} ~ {{ index.cutPrice }}€</h3>
                         </div>
                     <hr />
                     <!-- Needed On Every Type -->
 
 
                     <h1>Coloring</h1>
-                    <h3>Short ~ 95€</h3>
-                    <h3>Medium length ~ 110€</h3>
-                    <h3>Long ~ 125€</h3>
-                    <h3>Extra long ~ 135€</h3>
+                    <div :key="index" v-for="index in colorPrices" class="price">
+                        <h3>{{ index.colorType }} ~ {{ index.colorPrice }}€</h3>
+                    </div>
                     <hr />
 
                     <h1>Coloring (Without Cutting)</h1>
-                    <h3>Short ~ 75€</h3>
-                    <h3>Medium length ~ 90€</h3>
-                    <h3>Long ~ 100€</h3>
-                    <h3>Extra long ~ 115€</h3>
-
+                    <div :key="index" v-for="index in nocutColorPrices" class="price">
+                        <h3>{{ index.nocutType }} ~ {{ index.nocutPrice }}€</h3>
+                    </div>
                     <hr />
-                    <h3>Base color and cut (approx. 3cm) ~ 90€</h3>
-                    <h3>Base color without cutting ~ 70€ (Thick hair + 15€)</h3>
-                    <h4></h4>
-                    <h3>? Base extension (1-2cm) including coloring ~ 100€</h3>
+
+                    <div :key="index" v-for="index in nocutOthers" class="price">
+                        <h3>{{ index.nocutOtherType }} ~ {{ index.nocutOtherPrice }}€</h3>
+                    </div>
                     <hr />
 
                     <h1>Lightening including coloring and cutting</h1>
-                    <h3>Short ~ 150€</h3>
-                    <h3>Medium length ~ 175€</h3>
-                    <h3>
-                        Long ~ 190-250€
-                        <span
-                            >+ end lightening (1-2cm at the bottom) and toning
-                            the ends ~ from 130€</span
-                        >
-                    </h3>
-                    <h3>Color removal including coloring ~ from 150-350€</h3>
+                    <div :key="index" v-for="index in lighteningPrices" class="price">
+                        <h3>{{ index.lightType }} ~ {{ index.lightPrice }}€</h3>
+                    </div>
                     <hr />
+
+
                     <h1>Stripes and Clipping and Coloring</h1>
-                    <h3>Short ~ 100€</h3>
-                    <h3>Medium length ~ 120€</h3>
-                    <h3>Long ~ 135€</h3>
+                    <div :key="index" v-for="index in stripesPrices" class="price">
+                        <h3>{{ index.stripesType }} ~ {{ index.stripesPrice }}€</h3>
+                    </div>
                     <hr />
+
+
                     <h1>Multicolor without lightening</h1>
                     <label>(For example with two colors)</label>
 
-                    <h3>Short ~ 105€</h3>
-                    <h3>Medium length ~ 115€</h3>
-                    <h3>Long ~ 120€</h3>
-                    <h3>Extra long ~ 140€</h3>
-                    <br />
-                    <h3>Airtouch, shatoosh 60€/h (5t) ~ 170-400€</h3>
+                    <div :key="index" v-for="index in multicolorPrices" class="price">
+                        <h3>{{ index.multicolorType }} ~ {{ index.multicolorPrice }}€</h3>
+                    </div>
                     <hr />
+
+
                     <h1>Permanent (including cut)</h1>
-                    <h3>Short ~ 90€</h3>
-                    <h3>Medium length ~ 120€</h3>
+                    <div :key="index" v-for="index in permanentPrices" class="price">
+                        <h3>{{ index.permanentType }} ~ {{ index.permanentPrice }}€</h3>
+                    </div>
                     <hr />
+
+
                     <h1>Lashes and Brows</h1>
-                    <h3>
-                        Permanent dyeing and styling of lashes and brows ~ 28€
-                    </h3>
-                    <h3>Coloring and shaping the corners ~ 20€</h3>
-                    <h3>Lash shading ~ 15€</h3>
-                    <h3>Shaping the corners ~ 10€</h3>
+                    <div :key="index" v-for="index in lashesnbrowsPrices" class="price">
+                        <h3>{{ index.lashesType }} ~ {{ index.lashesPrice }}€</h3>
+                    </div>
                     <hr />
-                    <h1>Main SPA Hair Package</h1>
-                    <h4>
-                        Internal treatment, head trimming, suitable for your
-                        hair. Mask processing, hair washing and cutting.
-                    </h4>
-                    <h3>Party hairstyle ~ 65€/t</h3>
-                    <h3>Bridal hairstyle ~ 160€</h3>
-                    <h3>Washing and blow-drying ~ 40€</h3>
+
+
+                    <h1>SPA Hair Package</h1>
+                    <div :key="index" v-for="index in spaHairPrices" class="price">
+                        <h3>{{ index.spaType }} ~ {{ index.spaPrice }}€</h3>
+                    </div>
                     <hr />
+
+
                     <h1>Makeup</h1>
-                    <h3>Bridal makeup (incl. trial makeup) ~ 160€</h3>
-                    <h3>Day makeup ~ 65€</h3>
-                    <h3>Evening makeup ~ 75€ + 10€ (with fake eyelashes)</h3>
-                    <h3>Nude ~ 65€</h3>
-                    <h3>Anti-aging makeup ~ 75€</h3>
-                    <h3>Men's makeup ~ 45€</h3>
+                    <div :key="index" v-for="index in makeupPrices" class="price">
+                        <h3>{{ index.makeupType }} ~ {{ index.makeupPrice }}€</h3>
+                    </div>
                     <hr />
+
+
                     <h1>Working times</h1>
                     <label id="list-option">Monday - 09:00-18:00</label><br />
                     <label id="list-option">Tuesday - 09:00-18:00</label><br />
@@ -135,28 +127,176 @@ export default {
     },
     data() {
         return {
-            prices: []
+            hairPrices: [],
+            colorPrices: [],
+            nocutColorPrices: [],
+            nocutOthers: [],
+            stripesPrices: [],
+            multicolorPrices: [],
+            permanentPrices: [],
+            lashesnbrowsPrices: [],
+            spaHairPrices: [],
+            makeupPrices: [],
+            lighteningPrices: []
         }
     },
     async mounted() {
-        // const querySnapshot = await getDocs(collection(db, "prices-en"));
-
         const Haircuts = await getDocs(collection(db, "prices-en/Haircut/Haircuts"))
-        let prices = [];
+        const Colors = await getDocs(collection(db, "prices-en/Coloring/options"))
+        const NoCutColor = await getDocs(collection(db, "prices-en/color-without-cut/options"))
+        const NoCutOthers = await getDocs(collection(db, "prices-en/color-without-cut/other-options"))
+        const Stripes = await getDocs(collection(db, "prices-en/stipes-and-clipping/options"))
+        const Multicolor = await getDocs(collection(db, "prices-en/multicolor-without-light/options"))
+        const PermanentHair = await getDocs(collection(db, "prices-en/permanent-with-cut/options"))
+        const LashesnBrows = await getDocs(collection(db, "prices-en/lashes-n-brows/options"))
+        const SpaHair = await getDocs(collection(db, "prices-en/spa-hair-package/options"))
+        const Makeup = await getDocs(collection(db, "prices-en/makeup/options"))
+        const Lightening = await getDocs(collection(db, "prices-en/lightening-coloring-n-cutting/options"))
 
+        
+        let hairPrices = [];
+        let colorPrices = [];
+        let nocutColorPrices = [];
+        let nocutOtherPrices = [];
+        let stripesPrices = [];
+        let multicolor = [];
+        let permanentHairs = [];
+        let lashesnbrows = [];
+        let spahair = [];
+        let makeup = [];
+        let lightening = [];
 
         // For every Section
         Haircuts.forEach((dbitem) => {
-            console.log(dbitem.id, " => ", dbitem.data());
             const newContent = {
                 id: dbitem.id,
                 cutType: dbitem.data().type,
                 cutPrice: dbitem.data().price,
             }
 
-            prices.push(newContent);
+            hairPrices.push(newContent);
 
-            this.prices = prices;
+            this.hairPrices = hairPrices;
+        })
+
+        Colors.forEach((dbitem) => {
+            const newContent = {
+                id: dbitem.id,
+                colorType: dbitem.data().type,
+                colorPrice: dbitem.data().price,
+            }
+
+            colorPrices.push(newContent);
+
+            this.colorPrices = colorPrices;
+        })
+
+        NoCutColor.forEach((dbitem) => {
+            const newContent = {
+                id: dbitem.id,
+                nocutType: dbitem.data().type,
+                nocutPrice: dbitem.data().price,
+            }
+
+            nocutColorPrices.push(newContent);
+
+            this.nocutColorPrices = nocutColorPrices;
+        })
+
+        NoCutOthers.forEach((dbitem) => {
+            const newContent = {
+                id: dbitem.id,
+                nocutOtherType: dbitem.data().type,
+                nocutOtherPrice: dbitem.data().price,
+            }
+
+            nocutOtherPrices.push(newContent);
+
+            this.nocutOthers = nocutOtherPrices;
+        })
+
+        Stripes.forEach((dbitem) => {
+            const newContent = {
+                id: dbitem.id,
+                stripesType: dbitem.data().type,
+                stripesPrice: dbitem.data().price,
+            }
+
+            stripesPrices.push(newContent);
+
+            this.stripesPrices = stripesPrices;
+        })
+
+        Multicolor.forEach((dbitem) => {
+            const newContent = {
+                id: dbitem.id,
+                multicolorType: dbitem.data().type,
+                multicolorPrice: dbitem.data().price,
+            }
+
+            multicolor.push(newContent);
+
+            this.multicolorPrices = multicolor;
+        })
+
+        PermanentHair.forEach((dbitem) => {
+            const newContent = {
+                id: dbitem.id,
+                permanentType: dbitem.data().type,
+                permanentPrice: dbitem.data().price,
+            }
+
+            permanentHairs.push(newContent);
+
+            this.permanentPrices = permanentHairs;
+        })
+
+        LashesnBrows.forEach((dbitem) => {
+            const newContent = {
+                id: dbitem.id,
+                lashesType: dbitem.data().type,
+                lashesPrice: dbitem.data().price,
+            }
+
+            lashesnbrows.push(newContent);
+
+            this.lashesnbrowsPrices = lashesnbrows;
+        })
+
+        SpaHair.forEach((dbitem) => {
+            const newContent = {
+                id: dbitem.id,
+                spaType: dbitem.data().type,
+                spaPrice: dbitem.data().price,
+            }
+
+            spahair.push(newContent);
+
+            this.spaHairPrices = spahair;
+        })
+
+        Makeup.forEach((dbitem) => {
+            const newContent = {
+                id: dbitem.id,
+                makeupType: dbitem.data().type,
+                makeupPrice: dbitem.data().price,
+            }
+
+            makeup.push(newContent);
+
+            this.makeupPrices = makeup;
+        })
+
+        Lightening.forEach((dbitem) => {
+            const newContent = {
+                id: dbitem.id,
+                lightType: dbitem.data().type,
+                lightPrice: dbitem.data().price,
+            }
+
+            lightening.push(newContent);
+
+            this.lighteningPrices = lightening;
         })
     }
 };
