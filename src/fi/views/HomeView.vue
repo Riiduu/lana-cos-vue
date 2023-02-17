@@ -50,10 +50,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.backg {
-  background-color: pink;
-}
 .home {
   background: url("@/assets/images/home-bg.jpg");
   background-size: cover;

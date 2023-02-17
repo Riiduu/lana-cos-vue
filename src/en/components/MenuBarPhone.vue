@@ -20,19 +20,19 @@ export default {
   },
   methods: {
     transferHome() {
-      router.push("/");
+      router.push("/home");
     },
     transferPricing() {
-      router.push("en/pricing");
+      router.push("/en/pricing");
     },
     transferAbout() {
-      router.push("en/about");
+      router.push("/en/about");
     },
     transferNews() {
-      router.push("en/news");
+      router.push("/en/news");
     },
     transferGallery() {
-      router.push("en/gallery");
+      router.push("/en/gallery");
     },
   },
 };

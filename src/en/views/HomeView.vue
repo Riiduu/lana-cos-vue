@@ -46,12 +46,12 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .home {
-  background-image: url("@/assets/images/home-bg.jpg");
+  background: url("@/assets/images/home-bg.jpg");
+  background-size: cover;
   max-width: 100%;
   height: 100vh;
-  background-color: pink;
 }
 
 .content {
@@ -63,8 +63,13 @@ export default {
   margin: 110px 80px 80px 80px;
   display: flex;
   flex-direction: column;
-  height: 73vh;
+  height: 40vh;
   width: 60%;
+  font-size: larger;
+
+  label {
+    padding-top: 30px;
+  }
 }
 
 #navbar {
@@ -87,6 +92,7 @@ export default {
     margin: 10px;
     text-align: center;
     width: 100%;
+    padding: 40px 0;
   }
 }
 </style>
