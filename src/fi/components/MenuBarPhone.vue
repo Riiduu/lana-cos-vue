@@ -44,8 +44,8 @@ export default {
 
 <style scoped>
 .menu-bar {
-  height: 86vh;
-  width: 100%;
+  height: 100vh;
+  max-width: 100%;
   background-color: lightgray;
   color: #454545;
   display: flex;

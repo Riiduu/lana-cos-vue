@@ -85,7 +85,8 @@ export default {
   opacity: 85%;
   color: white;
   padding: 15px 0 30px 0;
-  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
   position: fixed;
   text-align: center;
 }

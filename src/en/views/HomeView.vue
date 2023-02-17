@@ -50,7 +50,7 @@ export default {
 .home {
   background-image: url("@/assets/images/home-bg.jpg");
   max-width: 100%;
-  height: auto;
+  height: 100vh;
   background-color: pink;
 }
 

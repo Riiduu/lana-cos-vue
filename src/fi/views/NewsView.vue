@@ -14,14 +14,14 @@
         </div>
       </div>
     </div>
-    <FooterComponent />
+    <!-- <FooterComponent /> -->
   </div>
 </template>
 
 <script>
 import HeaderComponent from "@/fi/components/HeaderComponent.vue";
 import MenuBarPhone from "@/fi/components/MenuBarPhone.vue";
-import FooterComponent from "@/fi/components/NewsComponents/Footer.vue";
+// import FooterComponent from "@/fi/components/NewsComponents/Footer.vue";
 import { collection, getDocs } from "firebase/firestore";
 
 import { db } from "@/firebase/index.js";
@@ -31,7 +31,7 @@ export default {
   components: {
     HeaderComponent,
     MenuBarPhone,
-    FooterComponent,
+    // FooterComponent,
   },
   data() {
     return {
@@ -53,7 +53,7 @@ export default {
     },
   },
   async mounted() {
-    const querySnapshot = await getDocs(collection(db, "fiNews"));
+    const querySnapshot = await getDocs(collection(db, "news-fi"));
     let dbNews = [];
 
     querySnapshot.forEach((dbitem) => {

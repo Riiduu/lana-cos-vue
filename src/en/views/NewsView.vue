@@ -14,7 +14,7 @@
           <label>{{ index.newsText }}</label>
         </div>
       </div>
-      <FooterComponent />
+      <!-- <FooterComponent /> -->
     </div>
   </div>
 </template>
@@ -22,7 +22,7 @@
 <script>
 import HeaderComponent from "@/en/components/HeaderComponent.vue";
 import MenuBarPhone from "@/en/components/MenuBarPhone.vue";
-import FooterComponent from "@/en/components/NewsComponents/Footer.vue";
+// import FooterComponent from "@/en/components/NewsComponents/Footer.vue";
 import { collection, getDocs } from "firebase/firestore";
 
 import { db } from "@/firebase/index.js";
@@ -32,7 +32,7 @@ export default {
   components: {
     HeaderComponent,
     MenuBarPhone,
-    FooterComponent,
+    // FooterComponent,
   },
   methods: {
     ShowMenu() {
@@ -54,7 +54,7 @@ export default {
     };
   },
   async mounted() {
-    const querySnapshot = await getDocs(collection(db, "enNews"));
+    const querySnapshot = await getDocs(collection(db, "news-en"));
     let dbNews = [];
 
     querySnapshot.forEach((dbitem) => {

@@ -1,4 +1,5 @@
 <template>
+  <div class="backg">
   <div class="home">
     <MenuBarPhone id="menu-fs" :close-menu="CloseMenu"/>
       <div id="hidable">
@@ -13,6 +14,7 @@ Työskentelemme vain parhailla raaka-aineilla, ottaen huomioon jokaisen asiakkaa
         </div>
         
       </div>
+  </div>
   </div>
 </template>
 
@@ -47,12 +49,16 @@ export default {
 }
 </script>
 
-<style scoped>
-.home {
-  background-image: url("@/assets/images/home-bg.jpg");
-  max-width: 100%;
-  height: auto;
+<style lang="scss" scoped>
+
+.backg {
   background-color: pink;
+}
+.home {
+  background: url("@/assets/images/home-bg.jpg");
+  background-size: cover;
+  max-width: 100%;
+  height: 100vh;
 }
 
 .content {
@@ -64,8 +70,13 @@ export default {
   margin: 110px 80px 80px 80px;
   display: flex;
   flex-direction: column;
-  height: 73vh;
+  height: 40vh;
   width: 60%;
+  font-size: larger;
+
+  label {
+    padding-top: 30px;
+  }
 }
 
 #navbar {
@@ -88,6 +99,7 @@ export default {
     margin: 10px;
     text-align: center;
     width: 100%;
+    padding: 40px 0;
   }
 }
 
