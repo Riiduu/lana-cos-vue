@@ -132,7 +132,7 @@ export default {
         const Colors = await getDocs(collection(db, "prices-fi/Coloring/options"))
         const NoCutColor = await getDocs(collection(db, "prices-fi/color-without-cut/options"))
         const NoCutOthers = await getDocs(collection(db, "prices-fi/color-without-cut/other-options"))
-        const Stripes = await getDocs(collection(db, "prices-fi/stipes-and-clipping/options"))
+        const Stripes = await getDocs(collection(db, "prices-fi/stripes-and-clipping/options"))
         const Multicolor = await getDocs(collection(db, "prices-fi/multicolor-without-light/options"))
         const PermanentHair = await getDocs(collection(db, "prices-fi/permanent-with-cut/options"))
         const LashesnBrows = await getDocs(collection(db, "prices-fi/lashes-n-brows/options"))
