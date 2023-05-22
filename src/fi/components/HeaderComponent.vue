@@ -14,7 +14,7 @@
         <label id="options" @click="transferPricing"
           >Hinnoittelu & Tiedot</label
         >
-        <label id="options" @click="transferAbout">Meistä</label>
+        <label id="options" @click="transferAbout">Yhteystiedot</label>
         <label id="options" @click="transferNews">Ajankohtaista</label>
       </div>
 
