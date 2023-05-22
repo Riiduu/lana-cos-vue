@@ -11,13 +11,13 @@
                     </div>
                     <hr />
 
-                    <h1>Värjays</h1>
+                    <h1>Värjäys</h1>
                     <div :key="index" v-for="index in colorPrices" class="price">
                         <h3>{{ index.colorType }} ~ {{ index.colorPrice }}€</h3>
                     </div>
                     <hr />
 
-                    <h1>Väriäys (Ilman Leikkausta)</h1>
+                    <h1>Värjäys (Ilman Leikkausta)</h1>
                     <div :key="index" v-for="index in nocutColorPrices" class="price">
                         <h3>{{ index.nocutType }} ~ {{ index.nocutPrice }}€</h3>
                     </div>
@@ -58,7 +58,7 @@
                         <h3>{{ index.lashesType }} ~ {{ index.lashesPrice }}€</h3>
                     </div>
                     <hr />
-                    <h1>SPA Hiuspaketti</h1>
+                    <h1>Hiuspaketti</h1>
                     <div :key="index" v-for="index in spaHairPrices" class="price">
                         <h3>{{ index.spaType }} ~ {{ index.spaPrice }}€</h3>
                     </div>
