@@ -9,7 +9,7 @@
     <option @click="transferPricing" id="menu-option">
       Hinnoittelu & Tiedot
     </option>
-    <option @click="transferAbout" id="menu-option">Meistä</option>
+    <option @click="transferAbout" id="menu-option">Yhteystiedot</option>
     <option @click="transferNews" id="menu-option">Ajankohtaista</option>
   </div>
 </template>
